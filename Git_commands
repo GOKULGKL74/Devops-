@@ -12,4 +12,17 @@ git reset #id  -to revert back [if mistakes done]
 
 //projects
 git remote add origin github_link*     [remote -handling url,origin -xtension like phnumber]
-git push origin master      [master -branch]
+git push origin main      [main -branch]latest /updated proj 
+git branch name*    [for testing/under developmnt]
+git checkout name*   [nme-feature]
+      q
+      q---main
+q-feature
+q-feature
+      q -(merge)     
+      q --main
+
+git merge main  /git merge feature 
+
+
+
