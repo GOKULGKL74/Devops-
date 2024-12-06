@@ -1,0 +1,15 @@
+GIT -version control
+github - platform 
+
+git init - initialize git repository
+git status -untracked files 
+git add . -untracked files added to repo [. all folder ][file name]
+git commit -m “[descriptive message]” - commit your staged content as a new commit snapshot
+
+git restore --staged filename*  [revert back to untrack]  [init,status,add.   restore*   status]  
+git log - to check history    [every commit hav uniq hashID]
+git reset #id  -to revert back [if mistakes done]
+
+//projects
+git remote add origin github_link*     [remote -handling url,origin -xtension like phnumber]
+git push origin master      [master -branch]
