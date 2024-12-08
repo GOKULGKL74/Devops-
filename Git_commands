@@ -11,6 +11,7 @@ git log - to check history    [every commit hav uniq hashID]
 git reset #id  -to revert back [if mistakes done]
 
 //projects
+git clone link*
 git remote add origin github_link*     [remote -handling url,origin -xtension like phnumber]
 git push origin main      [main -branch]latest /updated proj 
 git branch name*    [for testing/under developmnt]
@@ -23,6 +24,8 @@ q-feature
       q --main
 
 git merge main  /git merge feature 
+
+
 
 
 
