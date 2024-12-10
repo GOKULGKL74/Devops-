@@ -37,8 +37,23 @@ q-feature
       q --main
 
 git merge main /git merge feature  -merge main with feature once code is finalized 
-git push rigin main 
+git push origin main 
 
+
+//working on github project
+~fork the project to our account   [clone]
+1.git clone github link*    //forked proj which is in our github account [origin]
+2.git remote add upstream link*   //link  -where u need to update proj/source proj via pull req[upstream]
+            git remote -v 
+3.git branch new   //always create new branch to save chnges once looks good merge to main [new -branch nme]
+4.git checkout new    /now main points-> to new
+5.git add , git commit 
+6.git push origin new [cant directly push to original proj main ]
+            1.automatically req goes for original proj github 
+            2.create pull req in original proj
+            3.get notify in original proj nd merge it
+7.git push origin new -f [after some deletion/updation code]
+8.click fetch upstream in our proj to replect fork   
 
 
 
