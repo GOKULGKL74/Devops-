@@ -1,1 +1,6 @@
-
+TCP- Transmission Control Protocal -private
+  =>sequence ,connection oriented,security  [chat]  
+UDP- User Datagram Protocal-Public 
+  =>sequence less ,less connection ,less security [post]
+HTTP- Hyper text transfer protocal
+  =>tranfer data between client nd server
