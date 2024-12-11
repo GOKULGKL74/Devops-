@@ -4,3 +4,28 @@ UDP- User Datagram Protocal-Public
   =>sequence less ,less connection ,less security [post]
 HTTP- Hyper text transfer protocal
   =>tranfer data between client nd server
+IP address -where pc located   [eg phn num]
+    curl ip config.me -s
+ISP - internet service provider
+port number- which application need to communicate  -16 bits -2(pow 16)-65 000
+    HTTP -80
+    Mongidb -27017
+    sql- 1433    
+    0 - 1023 - Reserved ports
+    1024 -49152 -application like mongodb,sql..
+    49152 -65 00 -our use
+speed   1 Mbps -mega bits per sec  - 1000 000b/sec
+        1 gbps -giga bits per sec - 10 (pow 9)b/sec
+
+LAN - small ofc/home Via wifi ,ethernet
+MAN - accross city
+WAN - across country(fibre cables)
+
+Topologies 
+  BUS
+  RING
+  STAR
+  TREE (BUS ND STAR]
+  MESH (every pc conect to each other) expensive
+
+OSI Layers  APS TN D P
