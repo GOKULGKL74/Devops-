@@ -1,14 +1,22 @@
-TCP- Transmission Control Protocal -private
+TCP- Transmission Control Protocal -private  
   =>sequence ,connection oriented,security  [chat]  
 UDP- User Datagram Protocal-Public 
   =>sequence less ,less connection ,less security [post]
-HTTP- Hyper text transfer protocal
-  =>tranfer data between client nd server
+HTTP- Hyper text transfer protocal -it uses tcp
+  =>tranfer data between client nd server -get put push del
+    1xx -information
+    2xx -success
+    3xx -redirecting
+    4xx -error
+    5xx -server err
+  cookies -uniq string
+    stored in client brwser
+    when we 1st time visit browser cookies created nxt time cookies added in url 
 IP address -where pc located   [eg phn num]
     curl ip config.me -s
 ISP - internet service provider
 port number- which application need to communicate  -16 bits -2(pow 16)-65 000
-    HTTP -80
+    HTTP -80  -get push put del 
     Mongidb -27017
     sql- 1433    
     0 - 1023 - Reserved ports
@@ -18,6 +26,8 @@ speed   1 Mbps -mega bits per sec  - 1000 000b/sec
         1 gbps -giga bits per sec - 10 (pow 9)b/sec
 
 LAN - small ofc/home Via wifi ,ethernet
+Sockets -interface between process nd internet [process-features]
+
 MAN - accross city
 WAN - across country(fibre cables)
 
@@ -27,14 +37,56 @@ Topologies
   STAR
   TREE (BUS ND STAR]
   MESH (every pc conect to each other) expensive
+2 MODELS:
+  OSI - 7
+  TCP MODELS - 5
 
 OSI Layers  APS TN D P
-  Application - software
+  Application - software  -  HTTP- tcp
   Presentation - collect the data frm app convert to machine readable binary format(translation)/encryption
                   for encryption - SSL protocol used(secure socket lyr)
   Session - auth /authorsation(eg session will create whn u login some website )
   Transport - work with data [3 parts  -1.segmentation:data received from session divided to segments 2.flow control:amount to data to tranfer
-              3.error :if data lost]
-  Netwrk -comunicate one server to another eg :router logical addressing 
-  Data link -now data packet has data with ip of sender nd receiver  [mac idres]
+              3.error :if data lost]  - UDP TCP   -data be frames
+  Netwrk -comunicate one server to another eg :router logical addressing -- IP  -data be packets
+  Data link -now data packet has data with ip of sender nd receiver  [mac idres]  data be frames
   physical -connects router fr o/p
+
+TCP model (5) except presentation ,session
+application layer::http
+Protocol:
+  TCP/IP :  
+    =>HTTP  -uses tcp
+    =>DHCP -Dynamic Host Control Protocol 
+            allocate ip address with people nd device connected
+    =>FTP -File Transfer P
+    =>SMTP -simple mail transfer P [send]
+    =>POP3 IMAP -receive email [post of protocol]
+    =>SSH - login server
+    =>VNC -virtual netwrk computing -graphical control
+  Tenet -port 23 -connct -user connects remote device client
+
+DNS -domain name system it uses upd*
+    coverts google.com to ipaddress
+
+transport layer:: tcp udp
+  transport vs netwrk
+  - transport data from 1 end to another end -- **netwrk layer**
+  - from netwrk to application,which app i need to deliver  --transportlayer 
+ timers ~time while send data 
+ checksums -added value while sending data like encrpt nd decrypt while receive using checksum
+ 
+UDP - user datagram protocol
+  UDP - Stateless conection
+  connectionless protocol
+  faster 
+  upd packet  -source port + destination port + length of data + checksum + data 
+
+TCP: tranmision control protocol
+  connection orientd
+  err control
+  full duplex 
+IP:
+  ipv4 -32bits -2(pow 32) ~4.3 billion
+  ipv6 -128 bits -2(pow 32 x 4)  -2(pow 128)
+      cons:no backwrd
