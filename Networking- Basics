@@ -29,3 +29,12 @@ Topologies
   MESH (every pc conect to each other) expensive
 
 OSI Layers  APS TN D P
+  Application - software
+  Presentation - collect the data frm app convert to machine readable binary format(translation)/encryption
+                  for encryption - SSL protocol used(secure socket lyr)
+  Session - auth /authorsation(eg session will create whn u login some website )
+  Transport - work with data [3 parts  -1.segmentation:data received from session divided to segments 2.flow control:amount to data to tranfer
+              3.error :if data lost]
+  Netwrk -comunicate one server to another eg :router logical addressing 
+  Data link -now data packet has data with ip of sender nd receiver  [mac idres]
+  physical -connects router fr o/p
