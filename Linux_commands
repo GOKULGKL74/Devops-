@@ -1,1 +1,30 @@
+Linux commands
+->echo $PATH     //Check what are the environmental variable are there
+->pwd             //directory path
+->ls -a           //hidden folders
+->ls -l           //list the details of the folder
+->ls -R           //to check all folder inside folder in one cmd
+->cd .            //current directry
+->cd ..           //previous directry
 
+man ls  //
+  man -description of commnd
+
+creation:    >   -  output 
+  cat > file.txt 
+  cat > file2.txt
+  cat file.txt file2.txt > output.txt     /merge all contents put in output.txt .if old txt it can be replaced
+  cat file.txt file2.txt         //show contents 
+  cat file.txt         //open file contents
+  echo "hi" > file.txt     //old contents replaced by hi
+  cat hello.txt | tr a-z A-Z >hi.txt      //content in hello.txt chnged to capital ns stored in hi.txt  tr-translate 
+
+  touch file.txt
+
+copy: cp file.txt file2.txt
+      cp -R file file2     /copy folder use -R even has multiple directories
+move:mv file.txt ./name     next directry
+    mv file.txt  ../name    previous directry
+      mv file.txt rename.txt   //rename
+remove: rm file.txt
+  
