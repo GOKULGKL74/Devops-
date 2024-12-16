@@ -35,6 +35,10 @@ tail   /bottom 10 lines
 more   /more lines
 diff //compare 2 files  
   dif name.txt name2.txt
-locate -search the file
+locate -search the file 
+  locate " "
 find -find in particular directry
+  find ""
+diff -differnce btween 2 files 
+  diff txt.file txt2.file 
   
