@@ -41,4 +41,7 @@ find -find in particular directry
   find ""
 diff -differnce btween 2 files 
   diff txt.file txt2.file 
+Permission: read writr exec  -user sudo(grp) others
+  chmod u=rwx, g=rx,o=r file.txt
+
   
