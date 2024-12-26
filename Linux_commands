@@ -1,3 +1,9 @@
+shortcuts:
+move cursor to begining-ctrl+A
+move cursor to end-ctrl+E
+remove everthing -ctrl+U
+remove everthing after cursor -ctrl+K
+
 Linux commands
 ->echo $PATH     //Check what are the environmental variable are there
 ->pwd             //directory path
@@ -41,7 +47,32 @@ find -find in particular directry
   find ""
 diff -differnce btween 2 files 
   diff txt.file txt2.file 
-Permission: read writr exec  -user sudo(grp) others
-  chmod u=rwx, g=rx,o=r file.txt
+Permission: read(r) writr(w) exec(x)  -user sudo(grp) others
+  chmod u=rwx, g=rx,o=r file.txt   //we can giv permission 
+  chmod 777 file.txt    //all permission
+4-read
+2-write
+1-exec
+0-no permission  
+  chmod 577 file.txt   //user have read nd ecex other,sudo have rwx
+
+Root permission://adminstrative purpose
+  1.change to sudo then give root permission
+  sudo chown root file.txt
+
+Search 
+  grep "hi" file.txt
+  grep -w "hi f" file.txt    //w word if full word present will get output
+search word in cureent directry  
+  grep -win "gokul" ./*.txt  /w -word i -case sensitive n-line number
+ping- to check connectivity status
+
+zip -zip zipfile.zip file.txt      //zipfile.zip -zip filename file.txt -whch file going to zip
+unzip -unzip file.txt
+
+networking cmnds:
+1. nslookup google.com   //ipaddress
+
+
 
   
