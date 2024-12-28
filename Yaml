@@ -1,3 +1,25 @@
 YAML - YAML AINT markup language
-=>data format used o exchange data
-=>data serialization
+    markup lang-parent child relationship
+=>data format used to exchange data
+=>data serialization (store data)
+  objct to file -serialsation  | file to obj -deserialisation
+  single format shared everywhere
+  process of converting objects(code+data) into bytes (thats easily transmitable)-yaml
+  every line shoulb be entry
+
+1.different document seperation:
+--
+file            
+--
+
+2.document ended:
+...   
+
+3.specific type:
+zero: !!int 0
+pos: !! int 5
+neg: !!int -5
+
+4:date nd time
+date: !!timestamp 2024-12-26
+
