@@ -1,3 +1,5 @@
+Tools:datree //validate yaml
+lens:advanced platform for k8s
 YAML - YAML AINT markup language
     markup lang-parent child relationship
 =>data format used to exchange data
@@ -22,4 +24,13 @@ neg: !!int -5
 
 4:date nd time
 date: !!timestamp 2024-12-26
+
+5:reusing properties
+likes: &l1
+ fav: mango
+ nonfavor: orange
+
+person1:
+ name:gokul
+ <<: *l1
 
