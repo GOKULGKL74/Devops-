@@ -1,4 +1,39 @@
+code -> docker file -> image ->container
+
 BASICS:
 Containers -container encapsulates app with os.that placed on machine
 
-Docker:
+Docker: run our application in isolated environmnt (conatainer)
+  architecture:
+    1.Runtime 
+        -RunC -start nd stop 
+        -ContainerD -manage Runc ,pull image,interact with internet
+    2.Docker Engine -daemon
+    3.orchestation -manage conatiner
+
+Image(template):file with set of instructions
+
+practise:
+1.docker run hello-world     //hello world -image                     
+   searching hello-world img in local
+    if yes 
+      RUN the image (by daemon)
+    else 
+      download from image docker registory and change to conatiner (daemon helps to chnge from img to conatiner)
+2.docker ps    //check which is running
+3.docker container ls   //listing container
+4.docker container exec -it id bash    //id -#id which is running ,bash added to running container
+5.docker stop id   //to stop container
+6.docker rm id   //remove container
+7.docker container prune -f   //delete stopped container at once
+  remove all images at once 
+    docker images -q (get all images)
+    docker rmi $(docker images -q) -f    //remove all images
+8.docker run -d p 8080:80 nginix    //check in browser nginix avalible in 8080
+
+save the content we wrked
+1.docker commit -m "created" id name:1.1    //id -docker id  1.1 -tag/version 
+run:> docker run -it name:1.1
+
+
+
