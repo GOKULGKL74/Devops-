@@ -1,18 +1,24 @@
-code -> docker file -> image ->container
+code -> docker file (build)-> image(run) ->container
 
 BASICS:
+dockerfile - txt document that conatins commands to assemble img 
+             docker read ths file nd build img
+image(template): create image that microservice to run eg:os,run time,code ,code depenencies   -static 
+      when u run image it becomes container 
 Containers -container encapsulates app with os.that placed on machine
-
 Docker: virtualisation software
 run our application in isolated environmnt (container)
+
+docker hub is registory
+docker registry -collection of repo
+docker repo -collection of related image with same 
+
   architecture:
     1.Runtime 
         -RunC -start nd stop 
         -ContainerD -manage Runc ,pull image,interact with internet
     2.Docker Engine -daemon
     3.orchestation -manage conatiner
-
-Image(template):file with set of instructions
 
 practise:
 1.docker run hello-world     //hello world -image                     
@@ -31,21 +37,42 @@ practise:
     docker images -q (get all images)
     docker rmi $(docker images -q) -f    //remove all images
 8.docker run -d p 8080:80 nginix    //check in browser nginix avalible in 8080
+      8080 -own choice   80-nginx port 
 
 save the content we wrked
 1.docker commit -m "created" id name:1.1    //id -docker id  1.1 -tag/version 
 run:> docker run -it name:1.1
 
-create docker img
-=>create account in docker 
-login via console
-  docker login
-1.touch Dockerfile      //create docker file 
-2.vi Dockerfile         //open it
-        FROM uduntu        //every img has 1 base img to run (os)
-        CMD ["echo","HI GOKULgt"]
-3.docker built -t myimage:1:01 .   [create folder . represts current folder that send all current folder nd files to docker]
-        
+---------------DEMO----------
+
+create account in docker and login 
+      docker login
+step1:create repository
+      mkdir myapp
+      cd myapp
+step2:create file
+      echo "hello" >index.html
+step3:create docker file
+      touch Dockerfile
+step4:open dockerfile add lines        //instruction to build docker image
+      FROM nginx:1.10             //base image where to run
+      COPY index.html /path   //action 
+step5:start docker nd build** docker image from dockerfile
+      docker build -t myimage:1:01 .   [create folder . represts current folder that send all current folder nd files to docker]
+      //now docker search dockerfile in current directory nad build image (myimage) 
+step6:run docker container from img
+      docker run -p 8080:80 myimage       //p -map port 8080(nginx) to 80 inside container   //can edit 
+      docker run -d -p 8080:80 myimage    //-d detach mode -no access to edit 
+step7: http:localhost:8080
+
+
+demo -pull images
+step1:docker pull nginx:1.23  
+
+step2:docker run -d nginx:1.23 myname
+      /docker run nginx:1:25  //if yes run else pull from directry
+--------------
+
 
 
 
