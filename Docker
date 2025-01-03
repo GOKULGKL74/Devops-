@@ -3,7 +3,8 @@ code -> docker file -> image ->container
 BASICS:
 Containers -container encapsulates app with os.that placed on machine
 
-Docker: run our application in isolated environmnt (conatainer)
+Docker: virtualisation software
+run our application in isolated environmnt (container)
   architecture:
     1.Runtime 
         -RunC -start nd stop 
@@ -34,6 +35,17 @@ practise:
 save the content we wrked
 1.docker commit -m "created" id name:1.1    //id -docker id  1.1 -tag/version 
 run:> docker run -it name:1.1
+
+create docker img
+=>create account in docker 
+login via console
+  docker login
+1.touch Dockerfile      //create docker file 
+2.vi Dockerfile         //open it
+        FROM uduntu        //every img has 1 base img to run (os)
+        CMD ["echo","HI GOKULgt"]
+3.docker built -t myimage:1:01 .   [create folder . represts current folder that send all current folder nd files to docker]
+        
 
 
 
