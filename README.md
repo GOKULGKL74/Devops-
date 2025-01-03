@@ -1,3 +1,11 @@
+devops
+  development -tools -operation 
+ roles:
+  communication -with teams 
+  tools -git jenkins...
+  feedback
+  automation 
+
 ->Linux Fundamentals
 ->Networking Concepts
 ->Git
