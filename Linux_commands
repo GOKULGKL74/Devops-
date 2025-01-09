@@ -34,7 +34,11 @@ move:mv file.txt ./name     next directry
       mv file.txt rename.txt   //rename
 remove: rm file.txt
 
-df //check storage 
+df -h    //check disc* size
+nproc   /no od cpu* running
+free    //check memory*
+top     //everything at one command about usage size mry
+
 head  /top 10 fine   
     head -n 4 file.txt     //first 4 lines 
 tail   /bottom 10 lines
