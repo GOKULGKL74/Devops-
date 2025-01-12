@@ -1,3 +1,4 @@
+                linux (#)
 shortcuts:
 move cursor to begining-ctrl+A
 move cursor to end-ctrl+E
@@ -12,10 +13,15 @@ Linux commands
 ->ls -R           //to check all folder inside folder in one cmd
 ->cd .            //current directry
 ->cd ..           //previous directry
+    
 
 man ls  //
   man -description of commnd
+./ filenmae.sh   or sh filename.sh  //execute script
 
+
+history  //previous commds
+  
 creation:    >   -  output 
   cat > file.txt 
   cat > file2.txt
@@ -26,6 +32,7 @@ creation:    >   -  output
   cat hello.txt | tr a-z A-Z >hi.txt      //content in hello.txt chnged to capital ns stored in hi.txt  tr-translate 
 
   touch file.txt
+  vim file.txt   //create nd open file 
 
 copy: cp file.txt file2.txt
       cp -R file file2     /copy folder use -R even has multiple directories
@@ -51,12 +58,16 @@ find -find in particular directry
   find ""
 diff -differnce btween 2 files 
   diff txt.file txt2.file 
-Permission: read(r) writr(w) exec(x)  -user sudo(grp) others
-  chmod u=rwx, g=rx,o=r file.txt   //we can giv permission 
-  chmod 777 file.txt    //all permission
+
+Permission:  chmod 3 arg -user(owner) grp everyone 
 4-read
 2-write
 1-exec
+  read(r) writr(w) exec(x)  -user sudo(grp) others
+  chmod u=rwx, g=rx,o=r file.txt   //we can giv permission ch -change 
+  chmod 777 file.txt    //all permission
+  chmod 444 file.txt    //read permission
+
 0-no permission  
   chmod 577 file.txt   //user have read nd ecex other,sudo have rwx
 
@@ -76,6 +87,8 @@ unzip -unzip file.txt
 
 networking cmnds:
 1. nslookup google.com   //ipaddress
+
+
 
 
 
