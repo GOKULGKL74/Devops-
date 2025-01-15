@@ -75,6 +75,9 @@ Root permission://adminstrative purpose
   1.change to sudo then give root permission
   sudo chown root file.txt
 
+process
+  1.ps -ef   //p-process f-details of the process in full format
+
 Search 
   grep "hi" file.txt
   grep -w "hi f" file.txt    //w word if full word present will get output
