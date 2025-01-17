@@ -1,4 +1,5 @@
                 linux (#)
+#!/bin/bash
 shortcuts:
 move cursor to begining-ctrl+A
 move cursor to end-ctrl+E
@@ -74,10 +75,10 @@ Permission:  chmod 3 arg -user(owner) grp everyone
 Root permission://adminstrative purpose
   1.change to sudo then give root permission
   sudo chown root file.txt
-
+................
 process
   1.ps -ef   //p-process f-details of the process in full format
-
+  2.ps -ef | grep gokul | awk '{print $1}'    /to get id 1-coulmn
 Search 
   grep "hi" file.txt
   grep -w "hi f" file.txt    //w word if full word present will get output
@@ -90,6 +91,20 @@ unzip -unzip file.txt
 
 networking cmnds:
 1. nslookup google.com   //ipaddress
+
+set:
+1.set -x  //debug mode  -to c command in output
+2.set -e  //exit when the eror occur [if pipe s there it not wrks so use set -o pipefail]
+    set -e
+    set -o pipefail
+[set -exo pipefail] -shortcut 
+
+logs:
+curl path  //retrive log from url
+wget path   //download the log file nd store in loc
+
+search:
+sudo find / -name file     //sudo -root user else we get permsiion denied  / -all folder 
 
 
 
