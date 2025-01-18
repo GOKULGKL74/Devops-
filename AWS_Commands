@@ -1,1 +1,27 @@
 
+Login EC2 instance via cmd 
+->download .pem file and give permission 
+    chmod 600 /path.pem
+->ssh -i /path.pem username@ipaddress
+
+AWS CLI: download aws cli
+  ->autheticate =account ->security cred->access key
+            access key
+            secret key will generate
+  ->aws configure
+  ->enter ID ,secret,region
+
+cloud formation Template(IAAS)
+  ->cloudformation->stacks->create stack->template ready/sample /templte from designer ->create
+
+script automation: better python boot03
+..................
+common commands using script
+list s3  -aws s3 ls
+list EC2 -aws ec2 describe-instance
+list lambda- aws lambda list-functions
+list IAM User-aws IAM list-users
+
+jq -jason 
+
+  
