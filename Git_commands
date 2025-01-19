@@ -11,10 +11,11 @@ git status -untracked files /added edited del
 git add . -untracked files added to repo [. all folder ][git add file*  -specific folder]
 git commit -m “[descriptive message]” - commit your staged content as a new commit snapshot /msg
 git reset --hard #id   //go to specific commit
-
+git dif -to check changes made
 git restore --staged filename*  [revert back to untrack]  [init,status,add.   restore*   status]  
 git log - to check history    [every commit hav uniq hashID]
 git reset #id  -to revert back [if mistakes done]
+git remote -v    -to check which repo to push  if not git remote add "path"   -path/repo 
 
 git stash   //files stored in somewhere but not in git but stored in background ,whenevr we need we can add[add status stash]
 git stage pop  // backgrnd data which not commit can revert back
@@ -47,14 +48,23 @@ git push origin main
 2.git remote add upstream link*   //link  -where u need to update proj/source proj via pull req[upstream]
             git remote -v 
 3.git branch new   //always create new branch to save chnges once looks good merge to main [new -branch nme]
-4.git checkout new    /now main points-> to new
+4.git checkout new    /now main points-> to new  [changing directry from main to other/other to main]
 5.git add , git commit 
-6.git push origin new [cant directly push to original proj main ]
+6.git log    //copy the id
+7.git cherry-pic id   //now new is merged to main  [limites id]  /git merge nd git rebase for bulk 
+
+
+
+
+git push origin new [cant directly push to original proj main ]
             1.automatically req goes for original proj github 
             2.create pull req in original proj
             3.get notify in original proj nd merge it
-7.git push origin new -f [after some deletion/updation code]
+git push origin new -f [after some deletion/updation code]
 8.click fetch upstream in our proj to replect fork   
+
+clone-download proj
+fork-copy the proj
 
 
 
