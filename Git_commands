@@ -10,6 +10,7 @@ git init - initialize git repository
 git status -untracked files /added edited del
 git add . -untracked files added to repo [. all folder ][git add file*  -specific folder]
 git commit -m “[descriptive message]” - commit your staged content as a new commit snapshot /msg
+git reset --hard #id   //go to specific commit
 
 git restore --staged filename*  [revert back to untrack]  [init,status,add.   restore*   status]  
 git log - to check history    [every commit hav uniq hashID]
