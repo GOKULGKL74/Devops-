@@ -1,1 +1,5 @@
-
+Terraform :[automate] -take config file -create api -send api to cloud vendor
+  write -plan -apply
+write -define syntax
+plan-demo /preview
+apply -final
