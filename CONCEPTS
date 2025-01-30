@@ -1,5 +1,25 @@
+configure managemnet:
+  1.Ansible: -automate
+        push models   //execute the code nd code get updated
+        agentless
+            -inventory file - add ip address (old mthe\od) or dynamic inventory (automatic)
+            -run ansible playbook
+        yaml accepts
+        written by python
+    (should be public,accept ssh for linux,win rm for windows..)
+        
+  2.puppet -pull-master slave
+  3.chef
+  4.salt
+
+
+
+
 Terraform :[automate] -take config file -create api -send api to cloud vendor
   write -plan -apply
 write -define syntax
 plan-demo /preview
 apply -final
+//track by statefile
+//sensitive info in statefile -so store it in remotely backends not local
+=>file should be read
