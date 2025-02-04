@@ -15,11 +15,13 @@ configure managemnet:
 
 
 
-Terraform :[automate] -take config file -create api -send api to cloud vendor
+Terraform :[automate] -take config file -create api -send api to cloud vendor 
   write -plan -apply
-write -define syntax
-plan-demo /preview
-apply -final
-//track by statefile
-//sensitive info in statefile -so store it in remotely backends not local
+  write -define syntax
+  plan-demo /preview
+  apply -final
+//track by statefile  
+//sensitive info in statefile -so store it in remotely backends not local (s3 -dynamo db (lock db)to avoid conflicts
 =>file should be read
+=>input file -variable/arguments
+=>output file -to 
