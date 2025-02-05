@@ -24,4 +24,12 @@ Terraform :[automate] -take config file -create api -send api to cloud vendor
 //sensitive info in statefile -so store it in remotely backends not local (s3 -dynamo db (lock db)to avoid conflicts
 =>file should be read
 =>input file -variable/arguments
-=>output file -to 
+=>output file -inlogs  which shoud show eg:ip 
+
+CI/CD
+Unit testing is nothing but testing code for a block or specific functionality.
+Static code analysis is to verify format, all indentation is right, syntax is right, make sure u didn't declare any unnecessary variables.
+Code quality/ vulnerability testing is done to check for vulnerability, that can be misused by hackers
+Automation testing/functional testing /endtoend testing, in this you verify your application in end to end manner such that one functionality doesn't affect other functionality.
+Reports - reports for how many units test passed , what is code quality etc.
+Deployment stage- deploying your application on a platform so that your customer can access your application.
