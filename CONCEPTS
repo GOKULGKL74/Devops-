@@ -27,9 +27,20 @@ Terraform :[automate] -take config file -create api -send api to cloud vendor
 =>output file -inlogs  which shoud show eg:ip 
 
 CI/CD
+  CI -integrate set of process before deleivery process
+  CD -deploy app in platform 
 Unit testing is nothing but testing code for a block or specific functionality.
 Static code analysis is to verify format, all indentation is right, syntax is right, make sure u didn't declare any unnecessary variables.
 Code quality/ vulnerability testing is done to check for vulnerability, that can be misused by hackers
 Automation testing/functional testing /endtoend testing, in this you verify your application in end to end manner such that one functionality doesn't affect other functionality.
 Reports - reports for how many units test passed , what is code quality etc.
 Deployment stage- deploying your application on a platform so that your customer can access your application.
+
+ci/cd Jenkins pipeline
+  jenskins is a conatiner( colections of tools )
+  tools-maven,sonar,alm,docker,k8s
+
+jenkins stages 
+  1.dev 
+  2.stage
+  3.prod
