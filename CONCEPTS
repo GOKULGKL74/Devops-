@@ -40,7 +40,18 @@ ci/cd Jenkins pipeline
   jenskins is a conatiner( colections of tools )
   tools-maven,sonar,alm,docker,k8s
 
+gitlab-for gitlab ci
+github -for github ci
 jenkins stages 
   1.dev 
   2.stage
   3.prod
+
+jenkins vs github action
+  ->jenkins
+    =>self hsted-need server to run
+    =>expensive  and complex
+  ->github
+    =>hosted on github nd run by github repo
+    =>open source nd easy for simple automation task
+
