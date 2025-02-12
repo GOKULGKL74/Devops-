@@ -51,7 +51,10 @@ jenkins vs github action
   ->jenkins
     =>self hsted-need server to run
     =>expensive  and complex
-  ->github
+  ->github -platform oriented
     =>hosted on github nd run by github repo
     =>open source nd easy for simple automation task
+    create .github/workflows
+
+github action-self hosted  nd github hosted
 
