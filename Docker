@@ -1,4 +1,7 @@
 code -> docker file (build)-> image(run) ->container
+docker build-build docker img from dockerfile
+docker run-run the container from docker img
+docker push-push container img to private/public registry to share img
 
 BASICS:
 dockerfile - txt document that conatins commands to assemble img 
