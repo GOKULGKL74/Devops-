@@ -20,7 +20,7 @@ docker repo -collection of related image with same
     1.Runtime 
         -RunC -start nd stop 
         -ContainerD -manage Runc ,pull image,interact with internet
-    2.Docker Engine -daemon
+    2.Docker Engine -daemon-heart -if daemon dwn dcker sops wrk
     3.orchestation -manage conatiner
 
 practise:
