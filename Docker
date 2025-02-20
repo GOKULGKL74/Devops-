@@ -75,6 +75,27 @@ step1:docker pull nginx:1.23
 step2:docker run -d nginx:1.23 myname
       /docker run nginx:1:25  //if yes run else pull from directry
 --------------
+Multi-stage:
+  split your docker file into multiple stages and minimizee the size (what exactly need just copy into another stage and build it)
+  can build n number of stage with 1 final stage
+----Distroless---
+  minimize the image/light weight  with no pakage 
+  that has only runtime
+  good in security 
+
+eg:scratch
+
+---------------------
+drawback:
+1. once docker stoped we cannt access the info bz it was destroyed(if docker down -all waste)
+    cant see previous logs 
+2. if any front / backend goes down - this cause issue
+3.docker ca access all data but dont knw how
+
+soln:
+  bind mount ,
+  volumes
+  
 
 
 
