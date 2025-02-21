@@ -95,6 +95,18 @@ drawback:
 soln:
   bind mount ,
   volumes
+volume-can host in ec2,s3 ...(backup easy)
+    docker -v <arg>    //attached volume  nd pass via arg
+    docker --mount     both same -elabarate all
+    -->docker volume ls
+    -->docker volume create gt
+    -->docker volume inspest gt
+    -->docker volume rm gt
+
+step1 -create docker file
+step2 -build
+step3 -create volume       //docker run -d --mount source=gt,target-/app nginx:2:0   //data stored in /app whch s logs/backup
+delete volume -stop the conationer-delete the container-del the volume
   
 
 
