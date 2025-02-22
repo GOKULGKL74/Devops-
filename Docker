@@ -90,7 +90,7 @@ drawback:
 1. once docker stoped we cannt access the info bz it was destroyed(if docker down -all waste)
     cant see previous logs 
 2. if any front / backend goes down - this cause issue
-3.docker ca access all data but dont knw how
+3.docker can access all data but dont knw how
 
 soln:
   bind mount ,
@@ -108,7 +108,7 @@ step2 -build
 step3 -create volume       //docker run -d --mount source=gt,target-/app nginx:2:0   //data stored in /app whch s logs/backup
 delete volume -stop the conationer-delete the container-del the volume
   
-
-
+Networking:
+  contact two container
 
 
