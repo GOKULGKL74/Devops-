@@ -112,6 +112,17 @@ Networking: contact two container
  1.host conatiner
  2.bridge conatiner -default 
     -communicate conatiner with host -if needed secure netwrk also add
-  
 
+docker compose:
+  use yaml file 
+  run multiple comd/cpntainer
+
+  blocks:
+    1.service block -define conatiners
+      frontend
+      backend
+      db
+    2.netwrk 
+    3.volume
+cmd:docker compose up -d
 
