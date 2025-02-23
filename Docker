@@ -108,7 +108,10 @@ step2 -build
 step3 -create volume       //docker run -d --mount source=gt,target-/app nginx:2:0   //data stored in /app whch s logs/backup
 delete volume -stop the conationer-delete the container-del the volume
   
-Networking:
-  contact two container
+Networking: contact two container
+ 1.host conatiner
+ 2.bridge conatiner -default 
+    -communicate conatiner with host -if needed secure netwrk also add
+  
 
 
