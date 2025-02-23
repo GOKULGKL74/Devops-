@@ -1,2 +1,18 @@
-K8S
+Drawbacks of dockers:
+  -single host 
+  -no auto healing - devoper keep track whch container s down 
+  -no auto scale 
+  -simple platform -no* enterprise level support  eg:no loadbalancer,no firewal ,no auto scale,no api gateway.....
+docker cant be a prod bz no enterprise support - may be docker swan useful 
+
+  solution:-k8s
+K8S(google)
   -container orchestration platform
+  -its a cluster (group of nodes)master-slave 
+  -replica sets to solve auto scale
+  -fix/control the damage -if any conatainer down by automatic creates new container    -for auto heal
+  -hav enterprise platform called borg* -so its preferable
+
+drwbacks:still no advanced loadbalancer 
+
+
