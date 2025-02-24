@@ -11,8 +11,13 @@ K8S(google)
   -its a cluster (group of nodes)master-slave 
   -replica sets to solve auto scale
   -fix/control the damage -if any conatainer down by automatic creates new container    -for auto heal
-  -hav enterprise platform called borg* -so its preferable
+  -hav multiple enterprise platform support called borg* -so its preferable
 
 drwbacks:still no advanced loadbalancer 
+
+Architecture
+-pod - container run time
+kube let-responsible for run app if issue it will inform kubernetes/control plane nd take necessary action 
+kube proxy -netwrking, ip ,load balncer
 
 
