@@ -16,8 +16,11 @@ K8S(google)
 drwbacks:still no advanced loadbalancer 
 
 Architecture
--pod - container run time
-kube let-responsible for run app if issue it will inform kubernetes/control plane nd take necessary action 
-kube proxy -netwrking, ip ,load balncer
+    Master
+    slave
+slave:
+--->pod - container run time
+--->kube let-responsible for run app if issue it will inform kubernetes/control plane nd take necessary action 
+--->kube proxy -netwrking, ip ,load balncer
 
 
