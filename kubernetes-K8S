@@ -17,10 +17,21 @@ drwbacks:still no advanced loadbalancer
 
 Architecture
     Master
-    slave
+    slave/worker
 slave:
---->pod - container run time
+--->pod - container run time/wrapper 
 --->kube let-responsible for run app if issue it will inform kubernetes/control plane nd take necessary action 
 --->kube proxy -netwrking, ip ,load balncer
 
+K8s Distribution: have support (better user expr)-some popular 
+  k8s-if time is not dependent 
+  OPENSHIFT-redhat
+  RANCHER -rancher labs
+  Tanzo -vmware
+  EKS -amazon
+  AKS
+
+Terms:
+-k8s starts with pod.yaml   
+-kubectl -command line for k8s
 
