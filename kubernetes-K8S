@@ -27,8 +27,8 @@ slave(3):
 
 master (control)
 --->Api server(heart) -core component -giv instructions -take instructions from external world 
---->scheduler-schedule the resource (isntruction gvn by api server)
---->etcd -key value pair -cluster related info(likenbackup)
+--->scheduler-schedule the resource Like go to node1 /2(isntruction gvn by api server)
+--->etcd -key value pair -cluster related info(backup)
 --->control manager -contollers
 --->C-C-M (CLOUD CONTROL MANAGER)
 
