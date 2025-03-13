@@ -55,3 +55,14 @@ Terms:
 -k8s starts with pod.yaml   
 -kubectl -command line for k8s
 
+minikube
+-->install kube ctl //cmdline
+-->install minikube   //used to create k8s cluster
+--->minikube start
+      -vm created
+      -above vm single node k8s cluster
+  ->create yaml file for config
+-->kubectl create -f pod.yaml
+-->minukube ssh 
+-->curl ip
+
