@@ -6,12 +6,16 @@ Drawbacks of dockers:
 docker cant be a prod bz no enterprise support - may be docker swan useful 
 
   solution:-k8s
-K8S(google) -pods
+K8S(google) -pods 
   -container orchestration platform
   -its a cluster (group of nodes)master-slave 
   -replica sets to solve auto scale
   -fix/control the damage -if any conatainer down by automatic creates new container    -for auto heal
   -hav multiple enterprise platform support called borg* BY GOOGLE -so its preferable
+pods:
+  1.define hw to run
+  2.one r more containers(one fr app /one dr yaml to execute)
+        easy to talk via localhost,share local storage.share netwrk
 
 drwbacks:still no advanced loadbalancer ,Still people prefer virtual machine 
 
@@ -39,6 +43,13 @@ K8s Distribution: have support (better user expr)-some popular
   Tanzo -vmware
   EKS -amazon
   AKS
+
+demo-manage kops
+1.create EC2
+2.Itall dependies like kubectl,python nd kubectl
+3give permision if admin fine else fice IAM user permission(aws configure)
+4.instal s3 -for storing kops objects (back up)
+5.create cluster
 
 Terms:
 -k8s starts with pod.yaml   
