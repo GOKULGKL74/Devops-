@@ -12,10 +12,19 @@ K8S(google) -pods
   -replica sets to solve auto scale
   -fix/control the damage -if any conatainer down by automatic creates new container    -for auto heal
   -hav multiple enterprise platform support called borg* BY GOOGLE -so its preferable
-pods:
+....
+cluster
+  -grp of pods
+    pod-grp of container
+.....
+pods: starts here 
   1.define hw to run
-  2.one r more containers(one fr app /one dr yaml to execute)
-        easy to talk via localhost,share local storage.share netwrk
+  2.pod(one r more containers(one fr app /one fr yaml to execute))
+        easy to talk via localhost,share local storage,share netwrk,volume
+  y yaml? bz it was standard for enterprise
+Terms:
+-k8s starts with pod.yaml   
+-kubectl -command line for k8s
 
 drwbacks:still no advanced loadbalancer ,Still people prefer virtual machine 
 
@@ -46,17 +55,15 @@ K8s Distribution: have support (better user expr)-some popular
 
 demo-manage kops
 1.create EC2
-2.Itall dependies like kubectl,python nd kubectl
+2.Install dependies like kubectl,python nd kubectl
 3give permision if admin fine else fice IAM user permission(aws configure)
 4.instal s3 -for storing kops objects (back up)
 5.create cluster
 
-Terms:
--k8s starts with pod.yaml   
--kubectl -command line for k8s
+
 
 minikube
--->install kube ctl //cmdline
+-->install kubectl //cmdline
 -->install minikube   //used to create k8s cluster
 --->minikube start
       -vm created
@@ -65,4 +72,21 @@ minikube
 -->kubectl create -f pod.yaml
 -->minukube ssh 
 -->curl ip
+.................................deployment.............................
+deployemnt -hav auto scale ,auto healing
+  -->pod -- deployment(.yml)gv count for replica  --  Replica set(controller)  -->pods
 
+controller -default controller,RgoCD
+
+DEMO:   deploy-replicas-pod
+  -deployment.yml   //add replicas as 1
+  -kubectl apply -f pod.yml     //created(3)
+        deploy also created pods also created rs also created 
+  -kubectl get pods    kubectl get deploy   kubectl get rs
+if u delete 1 same time another pod wil create
+  -minikube ssh   | ssh -i ip (remote)
+.....................
+SERVICE:
+-load balancing
+-lables nd selectors  //not depend on ip only lables thats mentioned in yaml for that nods
+-expose to external wrld
