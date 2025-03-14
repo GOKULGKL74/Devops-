@@ -89,4 +89,9 @@ if u delete 1 same time another pod wil create
 SERVICE:
 -load balancing
 -lables nd selectors  //not depend on ip only lables thats mentioned in yaml for that nods
--expose to external wrld
+-expose to external wrld via load balancer 
+
+Service types:
+  node port  -only access inside org vpc
+  load balancer-generqte public ip -acess by everyone(outside wrld)
+  cluster ip -only who hav access to wrker node /k8s cluster netwrk
