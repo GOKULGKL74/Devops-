@@ -33,17 +33,17 @@ control plane  / data plane
    => Master (control plane)
    =>slave/worker (data plane)
 slave(3):
---->pod - container run time/wrapper 
+--->pod - smallest deployable unit -container run time/wrapper 
 --->hav container run time-container D,crio,docker swim  //to run app
 --->*kube-let-responsible for run app if issue it will inform kubernetes/control plane nd take necessary action 
---->kube proxy -netwrking, ip ,load balncer -mandatory -every pod has ip
+--->kube proxy -netwrking, ip ,load balncer -mandatory -every pod has ip -can talk another node
 
 master (control)
---->Api server(heart) -core component -giv instructions -take instructions from external world 
+--->Api server(heart) -core component -validate the request nd routhrm them -take instructions from external world 
 --->scheduler-schedule the resource Like go to node1 /2(isntruction gvn by api server)
 --->etcd -key value pair -cluster related info(backup)
---->control manager -contollers
---->C-C-M (CLOUD CONTROL MANAGER)
+--->control manager -contollers -used fr created update del
+--->C-C-M (CLOUD CONTROL MANAGER) -
 
 K8s Distribution: have support (better user expr)-some popular 
   k8s-if time is not dependent 
