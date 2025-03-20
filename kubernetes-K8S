@@ -75,14 +75,17 @@ minikube
 .................................deployment.............................
 deployemnt -hav auto scale ,auto healing
   -->pod -- deployment(.yml)gv count for replica  --  Replica set(controller)  -->pods
+    controller -maintain desired state=actual state  count of replica 
+    deployemnt- wrapper
 
 controller -default controller,RgoCD
 
-DEMO:   deploy-replicas-pod
+DEMO:   deploy-replicas-pod  :auto healing
   -deployment.yml   //add replicas as 1
   -kubectl apply -f pod.yml     //created(3)
         deploy also created pods also created rs also created 
   -kubectl get pods    kubectl get deploy   kubectl get rs
+  //kubectl get pods -w   //w-live action
 if u delete 1 same time another pod wil create
   -minikube ssh   | ssh -i ip (remote)
 .....................
