@@ -95,6 +95,8 @@ SERVICE:
 -expose to external wrld via load balancer 
 
 Service types:
-  node port  -only access inside org vpc
-  load balancer-generqte public ip -acess by everyone(outside wrld)
-  cluster ip -only who hav access to wrker node /k8s cluster netwrk
+  node port  -only access inside org vpc -hav wrker node ip address
+  load balancer-generqte elastic public ip -acess by everyone(outside wrld)-public 
+              -ccm will generate public ip with help of cloud provider   ccm-cloud control manager
+  cluster ip -only who hav access to wrker node /k8s cluster netwrk (inisde k8s)
+             -has load balancing ,discovery
