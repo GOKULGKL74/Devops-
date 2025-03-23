@@ -100,3 +100,14 @@ Service types:
               -ccm will generate public ip with help of cloud provider   ccm-cloud control manager
   cluster ip -only who hav access to wrker node /k8s cluster netwrk (inisde k8s)
              -has load balancing ,discovery
+
+INNGRESS:
+Y ingress?
+  enterprise TLS load balancing -
+          ratio based,black listing ,white listing,domain based....
+  cloud provide chrge for ip bz of static ip
+
+  ingress resourse ( load balancer cmpy creates ingress controller nd posted in github)
+              load balancers:nginx,f5,ambasidor,HA proxy...
+  user deploy ingress controller(ngnix) in k8s cluste nd depend on req define  ingress  yaml file define (white listing...) 
+  ingress contoller watch for ingress resourse  nd provide the feature
