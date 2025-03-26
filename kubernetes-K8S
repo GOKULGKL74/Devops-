@@ -111,3 +111,11 @@ Y ingress?
               load balancers:nginx,f5,ambasidor,HA proxy...
   user deploy ingress controller(ngnix) in k8s cluste nd depend on req define  ingress  yaml file define (white listing...) 
   ingress contoller watch for ingress resourse  nd provide the feature
+
+RBAC:role based access control
+-security
+-user managemnt nd access gven to pod
+user nd role(permission)namespce define  by role binding
+
+2 parts
+user          nd   service accounts
