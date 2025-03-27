@@ -114,8 +114,27 @@ Y ingress?
 
 RBAC:role based access control
 -security
--user managemnt nd access gven to pod
-user nd role(permission)namespce define  by role binding
-
-2 parts
+-2 parts
 user          nd   service accounts
+users:k8s offload the user managemnt to identity manager(gv role)  -k8s talk iam via oath*
+  identity provider-IAM by aws -that iam has users nd grps
+service:define in pod.yaml file
+how to manage?
+ role  -gv role to the user like create,read
+ role binding  -attach the role to user
+
+CR : Custom Resource D
+  extend feature(api) using
+          CRD -custom resourc definition
+              defining new type api and submit to k8s -in yaml file define what user can create
+              if new type added directly in dep.yml show err does nt known  
+              so custom resource submit to CRD (all possible senario)nd k8s will approve to use 
+----resouce defintion validate the resourse wich is accpeted y k8s
+----CRD validate the the custom resource (CR)
+----deployemnt controller creates pods,replica set so on..
+like custom controller creates custom resourse
+          CR
+          Custom contoller  -wrte by golang
+b 
+
+
