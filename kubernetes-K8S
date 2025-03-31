@@ -138,6 +138,8 @@ how to manage?
 
 role/cluster binding
  attacking the role to users 
+
+use redhat for rbac
 .....
 
 CR : Custom Resource D
@@ -152,6 +154,5 @@ CR : Custom Resource D
 like custom controller creates custom resourse
           CR
           Custom contoller  -wrte by golang
-b 
 
 
