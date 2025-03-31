@@ -112,16 +112,33 @@ Y ingress?
   user deploy ingress controller(ngnix) in k8s cluste nd depend on req define  ingress  yaml file define (white listing...) 
   ingress contoller watch for ingress resourse  nd provide the feature
 
+.........
+
 RBAC:role based access control
 -security
+-define access 
 -2 parts
-user          nd   service accounts
-users:k8s offload the user managemnt to identity manager(gv role)  -k8s talk iam via oath*
-  identity provider-IAM by aws -that iam has users nd grps
-service:define in pod.yaml file
+    user      nd   service accounts
+manage RBAC
+  service acconts/users
+  k8s roles/cluster roles
+  role binding/cluster role binding
+user:
+-->k8s wont manage user managemnt
+-->k8s offload the user managemnt to identity providers
+   Api server works like OATH server
+    eg:aws-if using EKS we have IAM users with IAM access provider-can login 
+    keyClock is a popular identity broker with LDAP,SSO,OKTA
+service:
+-->by yaml file
+by default servce r k8s attached to pod else we can user defined
 how to manage?
  role  -gv role to the user like create,read
  role binding  -attach the role to user
+
+role/cluster binding
+ attacking the role to users 
+.....
 
 CR : Custom Resource D
   extend feature(api) using
