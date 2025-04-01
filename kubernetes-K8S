@@ -1,4 +1,4 @@
-Drawbacks of dockers:
+i.k3Drawbacks of dockers:
   -single host 
   -no auto healing - devoper keep track whch container s down 
   -no auto scale 
@@ -143,12 +143,13 @@ use redhat for rbac
 .....
 
 CR : Custom Resource D
+Fyi : deployment.yml file creates resources- resource definition (api server) validates the resources 
   extend feature(api) using
           CRD -custom resourc definition
               defining new type api and submit to k8s -in yaml file define what user can create
               if new type added directly in dep.yml show err does nt known  
-              so custom resource submit to CRD (all possible senario)nd k8s will approve to use 
-----resouce defintion validate the resourse wich is accpeted y k8s
+              so custom resource submit to CRD (all possible senario)via yaml file nd k8s will approve to use 
+----CR -resouce defintion validate the resourse which is accpeted by k8s
 ----CRD validate the the custom resource (CR)
 ----deployemnt controller creates pods,replica set so on..
 like custom controller creates custom resourse
