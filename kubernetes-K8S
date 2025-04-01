@@ -143,7 +143,8 @@ use redhat for rbac
 .....
 
 CR : Custom Resource D
-Fyi : deployment.yml file creates resources- resource definition (api server) validates the resources 
+Fyi : deployment.yml file creates resources(version,netrwrking,strge)- resource definition (api server) validates the resources -deployment controller starts exec
+    Virtual service.yml file creates custom resource -custom resource definition CRD validates the custom resource -NOW K8S FUNCTIONALITY EXTENDED-custom k8s contoller satrts exec
   extend feature(api) using
           CRD -custom resourc definition
               defining new type api and submit to k8s -in yaml file define what user can create
