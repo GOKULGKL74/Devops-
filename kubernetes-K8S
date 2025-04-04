@@ -40,9 +40,10 @@ slave(3):
 
 master (control)
 --->Api server(heart) -core component -validate the request nd routhrm them -take instructions from external world 
---->scheduler-schedule the resource Like go to node1 /2(isntruction gvn by api server)
 --->etcd -key value pair -cluster related info(backup)
 --->control manager -contollers -used fr created update del
+--->scheduler-schedule the resource Like go to node1 /2(isntruction gvn by api server)
+
 --->C-C-M (CLOUD CONTROL MANAGER) -
 
 K8s Distribution: have support (better user expr)-some popular 
