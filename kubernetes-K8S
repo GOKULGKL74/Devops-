@@ -158,4 +158,10 @@ like custom controller creates custom resourse
           CR
           Custom contoller  -wrte by golang
 
+configmaps nd secrets
+1.config-non sensitive like port
+2.secrets-sensitive info like passwrd
+          Encrypt
+          giv strong RBAC rule-least privelage //only limited people can access
+
 
