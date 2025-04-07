@@ -164,4 +164,22 @@ configmaps nd secrets
           Encrypt
           giv strong RBAC rule-least privelage //only limited people can access
 
+k8s Monitoring :Prometheus
+k8s have API server ,it exposes lot of metrics about cluster
+apiserver/metrices -to get status of cluster 
+
+after installed prometheus 
+-it fetch that metrices and stored in TSDB (Time series DB) nd stored in HDD/SDD Node
+-with help of alertmanager sent notification
+-Run PromQL query in promethous to get detailed info
+
+GUI-Grafana  -data visulasation
+y? bz it have json data difficult to check logs so Grafana
+
+Helm/operators -package maanger fr k8s
+-
+
+
+
+
 
