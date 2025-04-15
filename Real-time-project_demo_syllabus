@@ -1,0 +1,11 @@
+deployment platform-k8s
+integration -jenkins
+=> git repo-
+  1.source code (CI(jenkins) ended in tests b4 docker)
+  2.manifests Repo (CD)
+1.Source code
+2.jenkins 
+  watches the Git (checking git continuously when commit made)  how ?? by Webhook***
+  webhook - git sents notification continuously to jenkins 
+  -config :in jenkins we have webhook url take nd pste in git repo for which action webhook need to notify jenkins commit,push ,pull....
+[for java we using maven to build app]  -docker agent -imge available in docker
