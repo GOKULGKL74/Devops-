@@ -1,11 +1,42 @@
 deployment platform-k8s
 integration -jenkins
+CI-test/img/code quality
+CD-delvery process 
+
+CI--output image with tag 
 => git repo-
   1.source code (CI(jenkins) ended in tests b4 docker)
   2.manifests Repo (CD)
 1.Source code
-2.jenkins 
+2.jenkins -archetrator platform -CI tool
   watches the Git (checking git continuously when commit made)  how ?? by Webhook***
-  webhook - git sents notification continuously to jenkins 
+  webhook - git sents notification  to jenkins when action made
   -config :in jenkins we have webhook url take nd pste in git repo for which action webhook need to notify jenkins commit,push ,pull....
-[for java we using maven to build app]  -docker agent -imge available in docker
+  -once notification sent to jenkins -jenkins will trigger pipeline
+**jenkins file **
+      stage 1:build nd test 
+      stage 2:static code anlysis
+      stage 3:sonarkube
+    -declarative jenkins file -we can write nd explain -easy
+    -scripted -hard to learn 
+3.Build -nd unit test,static code analysis
+[for java we using maven to build app]  -docker agent -image available in docker
+  -if success go to SONARcube else email notification(configure)
+4.sonarkube -security /vulnarabilty -if yes proceed docker image else email sent ie.,solenium,functional testing...we can add
+    SAST/DAST  
+5.building docker image
+6.docker image sent to container registry  ie.,docker hub,ECR(elastic container registry),krio.io
+
+
+.........
+CI CD how communicate  via ansible ,shell script that push to k8s/archestrator pltfrm
+best CD tool?             ansible s not cd tool
+
+CD:
+Aplication manifest -pod.yml,service.yml,deploymnet.yaml,.. store in GIT 
+y we need gitops ttols?
+    -to verify  like adding mount,volumes
+
+Argo image updater monitor/script (inside k8s)- continously Container registry and update directly to  the application manifest(pod.yml,service.yml) which is in git
+Argo CD (whch inside k8s)-monitor the git and if any changes deploy in the k8s 
+Arho image,argo cd -k8s controller
