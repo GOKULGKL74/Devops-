@@ -1,0 +1,4 @@
+Terraform:
+-write
+-plan -b4 execution dry run (test)
+-Apply
