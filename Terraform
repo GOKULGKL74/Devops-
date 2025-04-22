@@ -4,6 +4,12 @@ Terraform:
 -Apply
 
 1.configure aws with cli [aws->security cred ->id]
-2.ceate .tf file
-3.run main.tf file  ->creates teraform.tfstate 
+2.create .tf file
+3.run main.tf file  ->creates teraform.tfstate   //tracking
 
+vm.outputfiles  -user to knw which shold be shown on output log(eg:no access o aws how to check ip -by running pipleine /run we will c logs there we  get ip so on..] 
+vm.inputfiles- variables
+statefile
+  always in centralized loacation-s3  [bz file stored in gitnub some one clone and proceed chnges and lokks dif in statefile 
+github  statefie != our state file not possible so centralised loc
+  dont store it in local
