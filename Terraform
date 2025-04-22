@@ -10,6 +10,6 @@ Terraform:
 vm.outputfiles  -user to knw which shold be shown on output log(eg:no access o aws how to check ip -by running pipleine /run we will c logs there we  get ip so on..] 
 vm.inputfiles- variables
 statefile
-  always in centralized loacation-s3  [bz file stored in gitnub some one clone and proceed chnges and lokks dif in statefile 
+  always in centralized loacation-s3 -should be read access [bz file stored in gitnub some one clone and proceed chnges and lokks dif in statefile 
 github  statefie != our state file not possible so centralised loc
   dont store it in local
