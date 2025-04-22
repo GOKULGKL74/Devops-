@@ -2,3 +2,8 @@ Terraform:
 -write
 -plan -b4 execution dry run (test)
 -Apply
+
+1.configure aws with cli [aws->security cred ->id]
+2.ceate .tf file
+3.run main.tf file  ->creates teraform.tfstate 
+
