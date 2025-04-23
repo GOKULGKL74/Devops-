@@ -13,3 +13,10 @@ statefile
   always in centralized loacation-s3 -should be read access [bz file stored in gitnub some one clone and proceed chnges and lokks dif in statefile 
 github  statefie != our state file not possible so centralised loc
   dont store it in local
+
+
+practise:
+
+user---jenkins(execute the tf) ---github(stored tf file)-aws
+                                  |
+                                statefile -stored in s3 -dynamo db(locking purpose to avoid conflict/parallel execution)
