@@ -1,0 +1,13 @@
+1. Aws Account
+    VPC -default private /create vpc
+    EC2 -INSTANCE With keypair (3)-master 1,slave 2,3
+    Firewall(security groups) -which port need to be open
+      1.SSH -22 -to access vm(default)
+      2.HTTP  80  & HTTPS - 443  -
+      3.Custom TCP -30 000 to 32000 - to deploy k8s cluster
+                    3000 to 10000 -deploy apps
+      4.SMTP 25 & SMTPS 465 -mail
+      5.custom tcp - 6443 - k8s cluster
+  2.mobaxterm
+  3
+      
