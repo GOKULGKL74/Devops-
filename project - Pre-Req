@@ -9,5 +9,23 @@
       4.SMTP 25 & SMTPS 465 -mail
       5.custom tcp - 6443 - k8s cluster
   2.mobaxterm
-  3
-      
+
+
+FLOW:
+1.add new feature
+2.raise JIRA ticket (contains wat req need to be done)
+3.developer implemnt nd test in hs local machine
+4.push to github
+5.devops enginerr start pipeline in JENKINS
+    Stage1-Unit test
+    stage2-sonarqube -code quality check 
+    stage3-Trivy tool -vulnarability scan -if outdated,vulnarablity it will generate report 
+    build the application
+6.build app publish in nexus repository -to release managemnet (version)
+7.build image nd tag
+8.trivy -to scan docker img is there anu vulnarability
+9.push docker repository
+10.kubeaudit - check k8s cluster is good 
+11.deploy app in k8s
+12.mail notification is pipeline sSU/FA
+13.monitoring -Graphana
