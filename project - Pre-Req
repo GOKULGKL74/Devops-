@@ -1,7 +1,9 @@
+Pre-req
 1. Aws Account
     VPC -default private /create vpc
-    EC2 -INSTANCE With keypair (3)-master 1,slave 2,3
-    Firewall(security groups) -which port need to be open
+    EC2 -
+    INSTANCE With keypair (3)-master 1,slave 2,3
+    Firewall(security groups) -which port need to be open inbound outbound
       1.SSH -22 -to access vm(default)
       2.HTTP  80  & HTTPS - 443  -
       3.Custom TCP -30 000 to 32000 - to deploy k8s cluster
@@ -17,15 +19,37 @@ FLOW:
 3.developer implemnt nd test in hs local machine
 4.push to github
 5.devops enginerr start pipeline in JENKINS
-    Stage1-Unit test
-    stage2-sonarqube -code quality check 
+    Stage1-complie and Unit test
+    stage2-sonarqube* -code quality check -bugs
     stage3-Trivy tool -vulnarability scan -if outdated,vulnarablity it will generate report 
     build the application
 6.build app publish in nexus repository -to release managemnet (version)
-7.build image nd tag
+7.Docker - build image nd tag
 8.trivy -to scan docker img is there anu vulnarability
 9.push docker repository
 10.kubeaudit - check k8s cluster is good 
 11.deploy app in k8s
-12.mail notification is pipeline sSU/FA
+12.mail notification is pipeline is SU/FA
 13.monitoring -Graphana
+
+Phase1
+    Netwrk envirronment 
+    k8s cluster -to deploy app
+    vm 3 -server -soanrqube,nexus,jenkins,monitoring tool
+         master-slave
+Phase2
+    Git
+
+Phase3
+    CI CD pipeline
+
+Phase4
+    Monitoring tool -system level (cpu,ram)nd website levl 
+
+Kubeadm - setting up kubernets cluster
+Kubectl- CLI inteeact with cluster 
+kubelet- creating pods
+
+Master:
+ 1.define netwrk range 
+    
