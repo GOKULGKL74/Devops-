@@ -1,1 +1,9 @@
 
+IAM  
+  Authentication- enter ofc
+  Authorisation - enter server room 
+
+ user ,policy,groups
+  User -attach policy 
+  grps -if have many people
+  Roles -specific/grant permission to service,contact 2 aws account,users..
