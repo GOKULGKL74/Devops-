@@ -7,3 +7,9 @@ IAM
   User -attach policy 
   grps -if have many people
   Roles -specific/grant permission to service,contact 2 aws account,users..
+
+VPC:
+  ISOLATED VIRTUAL NETWRK
+
+  user - internet gateway - NACL(restrict1) -load balancer )=(restrict2) -route tables(path)-subnet -app |security grp(restrict3)
+  app -nat gateway(to access internt) -internet 
