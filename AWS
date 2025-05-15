@@ -20,4 +20,8 @@ CLI:
       using API can create/update /delte in aws
       tools to automation:Amazon CLI ,Teraform,cloud formation for AWS 
 CLI -simple task like ls ,create ..    teraform.cloud formation -complicated task like create vpc...
+
+CFT: Cloud formation template
+  CFT -supports YAML,JSON  ->aws api ->aws
+  Principles: Declarative(template) , version (git)
   
