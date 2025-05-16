@@ -41,5 +41,5 @@ CFT: Cloud formation template
 CI/CD
   Code Commit 
   AWS own set of CI/CD -code commit(version control git),code pipeline(jenkins pipleline),code build(maven), code deploy(argo cd)
-  
-  
+  1. code commit:
+    managed aws services
