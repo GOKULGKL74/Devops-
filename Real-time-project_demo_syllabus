@@ -37,6 +37,6 @@ Aplication manifest -pod.yml,service.yml,deploymnet.yaml,.. store in GIT
 y we need gitops ttols?
     -to verify  like adding mount,volumes
 
-Argo image updater monitor/script (inside k8s)- continously Container registry and update directly to  the application manifest(pod.yml,service.yml) which is in git
+Argo image updater monitor/script (inside k8s)- continously monitr Container registry and update directly to  the application manifest(pod.yml,service.yml) which is in git
 Argo CD (whch inside k8s)-monitor the git and if any changes deploy in the k8s 
 Arho image,argo cd -k8s controller
