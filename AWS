@@ -23,16 +23,23 @@ CLI -simple task like ls ,create ..    teraform.cloud formation -complicated tas
 
 CFT: Cloud formation template
   CFT -supports YAML,JSON  ->aws api call->aws
-  Principles: Declarative(template) , version (git)
-  CFT Has dedect Drift option -if some one chnge code we can see altered section 
+  Principles: Declarative(template , version (git)
+  CFT Has dedect Drift option -if some one chnge code- we can track altered section 
   syntx:
     verison
     description:
-    metadata
-    paramtre
+    metadata - author,proj name
+    paramtre -
     rules
     mapping
     conditions
     resourse -mandatry
+  imp*** useful plugins bunch of req 
+      --->YAML
+      --->AWS Toolkit
+
+CI/CD
+  Code Commit 
+  AWS own set of CI/CD -code commit(version control git),code pipeline(jenkins pipleline),code build(maven), code deploy(argo cd)
   
   
