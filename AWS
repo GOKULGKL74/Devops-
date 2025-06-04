@@ -8,7 +8,7 @@ IAM
   grps -if have many people
   Roles -specific/grant permission to service,contact 2 aws account,users..
 
-VPC:
+VPC: -secure isolated cloud in public netwrk
   ISOLATED VIRTUAL NETWRK
 
   user - internet gateway - NACL(restrict1) -load balancer )=(restrict2) -route tables(path)-subnet -app |security grp(restrict3)
