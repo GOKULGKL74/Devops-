@@ -55,5 +55,6 @@ private: github private/gitlab server instal in lap/aws code commit
     managed aws services
 
   disadvntge:
-   restriction 
-   less intragaration eg:git - if u click . visual studio open ,codepilot so on..
+   restricted
+   less intragaration with service outside aws eg:git - if u click . visual studio open ,codepilot so on..
+    UI -not great
