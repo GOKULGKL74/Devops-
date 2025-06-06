@@ -42,7 +42,18 @@ CFT: Cloud formation template*
       --->AWS Toolkit
 
 CI/CD
-  Code Commit 
-  AWS own set of CI/CD -code commit(version control git),code pipeline(jenkins pipleline),code build(maven), code deploy(argo cd)
+  dont use root account use IAM account
+  AWS own set of CI/CD 
+    [1-code(github)- webhooks trigger it reach 2.jenkins 3.build process strted (testing )-final product at docker-deploy on EC2)
+        code commit(version control git)- Host -private 
+              we can use editor /aws UI -in UI we can only upload /edit one file at time so use Terminal**
+        code pipeline(jenkins pipleline)- Archestrator
+        code build(maven)-docker 
+        code deploy(argo cd/shell script)
+private: github private/gitlab server instal in lap/aws code commit
   1. code commit:
     managed aws services
+
+  disadvntge:
+   restriction 
+   less intragaration eg:git - if u click . visual studio open ,codepilot so on..
