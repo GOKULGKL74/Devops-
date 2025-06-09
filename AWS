@@ -64,4 +64,10 @@ THEORY:
   code commit(git) -trigger aws code pipeline (1)-invokes CI nd Invokes CD
                                         CI- aws code build -build ,code scan,build img,img scan,img push ....
                                         CD -aws code deploy- k8s ,ec2
+
+cloud watch
+
+aws lambda  -compute(EC2)/serverless
+  serverless - create server nd proceed nd vanish
+  we dont knw where hosted,ayto scale, no ip address 
     
