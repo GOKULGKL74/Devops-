@@ -2,7 +2,7 @@
 IAM  
   Authentication- enter ofc
   Authorisation - enter server room 
-
+.
  user ,policy,groups
   User -attach policy 
   grps -if have many people
@@ -68,6 +68,10 @@ THEORY:
 cloud watch
 
 aws lambda  -compute(EC2)/serverless
-  serverless - create server nd proceed nd vanish
-  we dont knw where hosted,ayto scale, no ip address 
-    
+  depend upon req-automaically create compute and scale up 
+  serverless - create server nd proceed nd vanish   
+    eg:paymnt option -create infrasture -process nd vanish 
+  we dont knw where hosted,auto scale, no ip address 
+  event driven eg:run ths job at 10am everyday -cludwatch 
+               eg:if any storage resticted by cmpy gp3 -if wrkedn configured gp3 -sent an  notification
+  
