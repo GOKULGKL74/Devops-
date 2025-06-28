@@ -1,4 +1,7 @@
-
+s3
+  obj based storage 
+  store static files -audio,video,..
+  
 IAM  
   Authentication- enter ofc
   Authorisation - enter server room 
@@ -74,4 +77,9 @@ aws lambda  -compute(EC2)/serverless
   we dont knw where hosted,auto scale, no ip address 
   event driven eg:run ths job at 10am everyday -cludwatch 
                eg:if any storage resticted by cmpy gp3 -if wrkedn configured gp3 -sent an  notification
+
+cloud front
+  CDN - content delivery netwrk -create copy on edge loc(cached) -for easy access/reduce latency
+      no need to go for central loc 
+  req through routers
   
