@@ -82,4 +82,7 @@ cloud front
   CDN - content delivery netwrk -create copy on edge loc(cached) -for easy access/reduce latency
       no need to go for central loc 
   req through routers
+
+ECR -Aws servce for store nd manage containers
+  Elastic Container Registry -private repo
   
