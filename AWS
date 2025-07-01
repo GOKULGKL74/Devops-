@@ -85,7 +85,15 @@ cloud front
 
 ECR -Aws servce for store nd manage containers
   Elastic Container Registry -private repo
+  Auto healing (up down),auto scaling (if trafic it multiple)
 
 k8s -open source -popular
+  COE -auto healing via controler (up down),auto scale via harizontal pod scale
   if need aditional features -k8s hav option to extend but not ECR
+
+docker drawbacks:
+  if server dowm again comeup ip addres chnge 
+
+ECS -Elastic container  servce
+  
   
