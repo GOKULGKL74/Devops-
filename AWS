@@ -69,14 +69,22 @@ THEORY:
                                         CD -aws code deploy- k8s ,ec2
 
 cloud watch
+EC2 -Virtual compute/server
 
 aws lambda  -compute(EC2)/serverless
-  depend upon req-automaically create compute and scale up 
+  depend upon req-automaically create compute and scale up /down
   serverless - create server nd proceed nd vanish   
     eg:paymnt option -create infrasture -process nd vanish 
   we dont knw where hosted,auto scale, no ip address 
   event driven eg:run ths job at 10am everyday -cludwatch 
                eg:if any storage resticted by cmpy gp3 -if wrkedn configured gp3 -sent an  notification
+  for trigger by default: lambda_handler(like main function) going to trigger by automatic if extra function added need to include inside lamda handler function
+cost optiminzation-stale resources either delete /notify using cloudwatch
+  event driven -drive event automatic (create cron job that will run at 1 am) not by manual
+
+y lambda?
+  cost optmization,
+  security 
 
 cloud front
   CDN - content delivery netwrk -create copy on edge loc(cached) -for easy access/reduce latency
