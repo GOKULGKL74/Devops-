@@ -82,6 +82,12 @@ aws lambda  -compute(EC2)/serverless
 cost optiminzation-stale resources either delete /notify using cloudwatch
   event driven -drive event automatic (create cron job that will run at 1 am) not by manual
 
+  projects:
+   create lambda function (python) -this code talk to aws api (help of boto3) and depends on result perform action like CRUD
+   default exexution time - 3 sec for lamda (as smal as possible -it was paramater so it cost)
+    if no need to ddlete snapshot store ij aws us eaws glacier (cheap)
+        
+
 y lambda?
   cost optmization,
   security 
