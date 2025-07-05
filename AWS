@@ -111,17 +111,22 @@ docker drawbacks:
   if server dowm again comeup ip addres chnge 
   no auto scle,auto heal
 
-ECS -Elastic container  servce -simple arch
+ECS -Elastic container  servce -simple arch 
+    
     Auto healing (up down),auto scaling (if trafic it multiple)
+    structure: while creating cluster -2 option 
     1.fargate -no need to manage (serverless like lambda)
     2.ec2
+    task definition
+    add service like lb,ingress..
 
   demo:
     ->create cluster
     ->two option either fargate/ec2  to run conatainer 
     ->task.yml ->task definition (detail)-create task which need to run in conatiner 
     ->create service to attach load balancer...so on 
-Eks -amazon k8s -managed k8s by aws
+
+Eks -amazon k8s -managed k8s by aws -popular 
     control plane -wrker node ...
 
   
