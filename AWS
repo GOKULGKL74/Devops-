@@ -1,6 +1,6 @@
 s3
   obj based storage 
-  store static files -audio,video,..
+  store static files -audio,video,.. 
   
 IAM  
   Authentication- enter ofc
@@ -99,26 +99,30 @@ cloud front
 
 ECR -Aws servce for store nd manage containers -aws own container archestry 
   Elastic Container Registry -private repo
+  it has IAM so extra security 
   
 
 k8s -open source -popular -heavy architect
   COE -auto healing via controler (up down),auto scale via harizontal pod scale
-  if need aditional features -k8s hav option to extend but not ECR
+  if need aditional features -k8s hav option to extend but not ECR (crd)-by build own controler nd extend k8s
   popular -community support-open source -upto date 
 
 docker drawbacks:
   if server dowm again comeup ip addres chnge 
+  no auto scle,auto heal
 
 ECS -Elastic container  servce -simple arch
     Auto healing (up down),auto scaling (if trafic it multiple)
-    1.fargate -no need to manage 
+    1.fargate -no need to manage (serverless like lambda)
     2.ec2
+
   demo:
     ->create cluster
     ->two option either fargate/ec2  to run conatainer 
     ->task.yml ->task definition (detail)-create task which need to run in conatiner 
     ->create service to attach load balancer...so on 
-Eks -amazon k8s 
+Eks -amazon k8s -managed k8s by aws
+    control plane -wrker node ...
 
   
   
