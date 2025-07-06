@@ -1,4 +1,4 @@
-s3
+ s3
   obj based storage 
   store static files -audio,video,.. 
   
@@ -117,17 +117,18 @@ ECS -Elastic container  servce -simple arch
     structure: while creating cluster -2 option 
     1.fargate -no need to manage (serverless like lambda)
     2.ec2
-    task definition
+    task definition -container looks like 
     add service like lb,ingress..
 
   demo:
+    ->1.create ecr nd push img in ECR 
     ->create cluster
     ->two option either fargate/ec2  to run conatainer 
     ->task.yml ->task definition (detail)-create task which need to run in conatiner 
     ->create service to attach load balancer...so on 
 
-Eks -amazon k8s -managed k8s by aws -popular 
-    control plane -wrker node ...
+Eks -amazon k8s -managed k8s obj by aws -popular 
+    control plane -wrker node ...>aws can tk care of control plane 
 
   
   
