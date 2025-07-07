@@ -111,11 +111,11 @@ docker drawbacks:
   if server dowm again comeup ip addres chnge 
   no auto scle,auto heal
 
-ECS -Elastic container  servce -simple arch 
+ECS -Elastic container  servce -simple arch  -alternative for kubernetes
     
     Auto healing (up down),auto scaling (if trafic it multiple)
     structure: while creating cluster -2 option 
-    1.fargate -no need to manage (serverless like lambda)
+    1.fargate -no need to manage (serverless like lambda)-to run container [lamda for smal nd quik action]
     2.ec2
     task definition -container looks like 
     add service like lb,ingress..
@@ -129,6 +129,29 @@ ECS -Elastic container  servce -simple arch
 
 Eks -amazon k8s -managed k8s obj by aws -popular 
     control plane -wrker node ...>aws can tk care of control plane 
+    high available k8s cluster:
+       3 master 3 slave 
+      master-sch,cloud c manger,etcd,api gateway   via kube-adm/kops in master node 
+      slave -container netwrk interfce,container runtime, dns,kube proxy (apps we instal in slave)
 
+     y no kops?
+      need to managed -etcd crashed,certificate renew,schedule not wrking,server down -all need to chck by manual
+   so EKS comes to picture -Managed control plane 
+    -->if we create  EKS - we get highly available cluster with control plne components*
+    -->For data plane/wrker node- 2 options -either we can create EC2 0r Fargate (serverless compute)
+              eks with fargate -robust higly stable cluster
+              ec2-config autoscaling,moitoring ..
+
+    ->note: service: node port -person who hav access to master node ip can access the app
+                     clsuter port (default) -access via wrker /master node
+                     load balance mode -pblic  -costly    so ingress better option 
+            all under VPC -vpc hv public /private subnet (app in private subnet)
+                   public - need LB / if private 
+
+         what is ingress  eg :nginx
+               /abc goes->forward the req to servce->servce to  /abc pod  -like neeed to configure via kubectl 
+                outside user can not access anything inside bz it is in private vpc    (private vpc we plce app)
+                in public subnet plce LB that LB can access ingress via ingress controler
+                user talk to ALB -alb goes to ingres servce (/abc) 
   
   
