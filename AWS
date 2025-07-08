@@ -127,31 +127,51 @@ ECS -Elastic container  servce -simple arch  -alternative for kubernetes
     ->task.yml ->task definition (detail)-create task which need to run in conatiner 
     ->create service to attach load balancer...so on 
 
+
 Eks -amazon k8s -managed k8s obj by aws -popular 
     control plane -wrker node ...>aws can tk care of control plane 
     high available k8s cluster:
        3 master 3 slave 
-      master-sch,cloud c manger,etcd,api gateway   via kube-adm/kops in master node 
+      master-schdlr,cloud c manger,etcd,api server gateway   via kube-adm/ kops in master node 
       slave -container netwrk interfce,container runtime, dns,kube proxy (apps we instal in slave)
 
      y no kops?
-      need to managed -etcd crashed,certificate renew,schedule not wrking,server down -all need to chck by manual
+      need to managed -etcd crashed,certificate renew,schedule not wrking,server down -all need to chck by manual for 1 cluster  if 100 cluster?
    so EKS comes to picture -Managed control plane 
     -->if we create  EKS - we get highly available cluster with control plne components*
     -->For data plane/wrker node- 2 options -either we can create EC2 0r Fargate (serverless compute)
               eks with fargate -robust higly stable cluster
-              ec2-config autoscaling,moitoring ..
-
+              ec2-config autoscaling,moitoring ..need to take care by us
+     if we create pod(lowest )-will get cluster IP
+     Y SERVICE? how to access that app 
     ->note: service: node port -person who hav access to master node ip can access the app
                      clsuter port (default) -access via wrker /master node
-                     load balance mode -pblic  -costly    so ingress better option 
+                     load balance mode -pblic -elastic IP  -costly    so ingress better option 
             all under VPC -vpc hv public /private subnet (app in private subnet)
                    public - need LB / if private 
 
-         what is ingress  eg :nginx
+         what is ingress  eg :nginx  -ingress.yml`
                /abc goes->forward the req to servce->servce to  /abc pod  -like neeed to configure via kubectl 
                 outside user can not access anything inside bz it is in private vpc    (private vpc we plce app)
                 in public subnet plce LB that LB can access ingress via ingress controler
                 user talk to ALB -alb goes to ingres servce (/abc) 
-  
-  
+
+practise
+kubectl -interact with k8s cluster (kubectl needs kube config file  )
+eksctl -
+aws cli- aws configure ,id ..
+Can integrate any identity provider- LDAP ,okta,keycloak
+
+   1. ingress -alb 
+      / go to ->service :service-2048
+   2.service 
+       name:service-2048
+       selector - app-2048 ,target port :80
+  3.deploymnet:
+       lables nd container - port:80
+       image 
+  4.create  ingres controler for  2048 and it wil configure  lb [after creating ingress controler we get address]
+    if alb we need pre-req which is IAM OIDC Connector(auth) -for access other aws servce -via eksctl
+    create alb ingress controller nd create iam policy (give access) 
+         by curl cmd   and create the policy (documentation)and create service acc with attach role 
+  use helm for install load balancer controller 
