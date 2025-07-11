@@ -175,3 +175,13 @@ Can integrate any identity provider- LDAP ,okta,keycloak
     create alb ingress controller nd create iam policy (give access) 
          by curl cmd   and create the policy (documentation)and create service acc with attach role 
   use helm for install load balancer controller 
+
+secret mnager:
+ secret manager -highly secure -high cost 
+  rotation option with lammda 
+ system manager- docker user name ,docker registry url (less secure)   -use combination of secret nd system manager to reduce cost
+ hashi-corp vault - moving frm aws to azre....migration diffuclt -  ///multi cloud its useful(centralized soln)
+  -dedicted secret manager solution -opensource 
+  centralization 
+  encryption feature //community driven
+ 
