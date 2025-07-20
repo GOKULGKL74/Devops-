@@ -194,11 +194,13 @@ cloud migration: 7 stages
   monitr
   optimize
  stage: these 7 falls under prepare nd planning
-  Rehost
+  Rehost -POPUPAR ND SIMPLE-lift nd shift -
   Reflatform
   Repurchase
   Refactor
   Relocate
   Retire
   Retain
+
+STEP1: change from monolithic to microservice architecture
   
