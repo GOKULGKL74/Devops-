@@ -187,20 +187,24 @@ secret mnager:
 
 
 
-cloud migration: 7 stages 
-  preparation
-  planning
-  migrate
-  monitr
-  optimize
- stage: these 7 falls under prepare nd planning
-  Rehost -POPUPAR ND SIMPLE-lift nd shift -
+cloud migration: 7 stages    =7 R s
+  preparation -one time activity
+  planning  -one time ativty
+  migrate -multiple phases depends on  how many  microservice
+  monitr -
+  optimize -one time activity
+ strategies : these 7 falls under prepare nd planning
+  Rehost -POPUPAR ND SIMPLE- 
+          lift nd shift -if no dependiencies on ENVIRONMENT* (software ,hardware)
   Reflatform
   Repurchase
-  Refactor
+  Refactor/re-architcture
+          when convert from monolithic to cloud 
   Relocate
-  Retire
-  Retain
+  Retire -no longer use just retire
+  Retain  -least used
+
+  retire nd retain -not in cloud migration but its decision this app need r not
 
 STEP1: change from monolithic to microservice architecture
   
