@@ -14,10 +14,23 @@ IAM
 VPC: -secure isolated cloud in public netwrk
   ISOLATED VIRTUAL NETWRK
 
-  user - internet gateway - NACL(restrict1) -load balancer )=(restrict2) -route tables(path)-subnet -app |security grp(restrict3)
+  user - internet gateway - NACL(restrict1) -load balancer =(restrict2) -route tables(path)-subnet -app |security grp(restrict3)
   app -nat gateway(to access internt) -internet
 
- nacl -firewall which control inbound outbound yraffic
+user -->internet gateway --->public subnet(accs to all private subnet) -->LB | -->route table -->private subnet -->security grp | -->app
+
+ nacl -netrk access control list -security at subnet lvl
+  firewall which control inbound outbound yraffic  -from subnet to internet
+  masking the subnet ip address (either routing /lb ip)
+
+security grp vs NACL
+ sec grp - serve as in instance level
+ Nacl -security at subnet lvl 
+
+security grp   default : alllow all outbound allow expect port 25(mail) |  inbount:deny 
+       y not port 25- bz of spam 
+ inbound -user to ap
+ outbound  -ap to internt/othr app
 
 CLI: commnd line interfce
   aws UI / CLI (IAAS)/
