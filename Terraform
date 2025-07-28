@@ -1,3 +1,5 @@
+IAAS -by Terraform/ CFT 
+
 Terraform:
 -write
 -plan -b4 execution dry run (test)
@@ -14,6 +16,9 @@ statefile
 github  statefie != our state file not possible so centralised loc
   dont store it in local
 
+
+....
+STEP1: terraform init,plan,deploy,destroy
 
 practise:
 
