@@ -14,7 +14,6 @@ IAM
 VPC: -secure isolated cloud in public netwrk
   ISOLATED VIRTUAL NETWRK
 
-  user - internet gateway - NACL(restrict1) -load balancer =(restrict2) -route tables(path)-subnet -app |security grp(restrict3)
   app -nat gateway(to access internt) -internet
 
 user -->internet gateway --->public subnet(accs to all private subnet) -->LB | -->route table -->private subnet -->security grp | -->app
@@ -22,6 +21,10 @@ user -->internet gateway --->public subnet(accs to all private subnet) -->LB | -
  nacl -netrk access control list -security at subnet lvl
   firewall which control inbound outbound yraffic  -from subnet to internet
   masking the subnet ip address (either routing /lb ip)
+
+-->vpc have 2 region 2 public subnet 2 private subnet
+  ip  ->internet gateway -->public subnet(NAT/ALB) -->private subnet (via route table)
+
 
 security grp vs NACL
  sec grp - serve as in instance level
@@ -142,7 +145,13 @@ ECS -Elastic container  servce -simple arch  -alternative for kubernetes
 
 
 Eks -amazon k8s -managed k8s obj by aws -popular 
+[node
     control plane -wrker node ...>aws can tk care of control plane 
+        ETCD (Recover)-like replicas,dep specs..
+        scheduler-newly created pod asign to node based on availability
+        controler manager- current state =actual state 
+        aws cloud manager - feature that r not in aws by add and configure -eks with load balancer
+        API server - interact with above components - auth nd athen 
     high available k8s cluster:
        3 master 3 slave 
       master-schdlr,cloud c manger,etcd,api server gateway   via kube-adm/ kops in master node 
