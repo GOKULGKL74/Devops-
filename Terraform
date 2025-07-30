@@ -25,3 +25,25 @@ practise:
 user---jenkins(execute the tf) ---github(stored tf file)-aws
                                   |
                                 statefile -stored in s3 -dynamo db(locking purpose to avoid conflict/parallel execution)
+
+resources -aws,azurerm,..
+Variables: inp,out
+  inp -pass info to terraform
+  out -console to print 
+
+eg:
+variable "instance_type"{
+type:string
+default:"t2.micro"
+}
+
+resource "instance" "ins"{
+ instance_type=var.instance_type
+}
+
+structure:
+variable.tf
+provider.tf ....so on
+
+terraform.tfvar  ->input dynamically
+
