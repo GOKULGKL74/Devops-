@@ -49,7 +49,7 @@ variable.tf
 provider.tf ....so on
 
 terraform.tfvar  ->input dynamically
-
+.................................................................................
 2.variables:
 -->string
 -->number
@@ -76,3 +76,18 @@ resource "aws_instance" "name"{
 
 type=string  -->alue
 type=number  -->no of isntance 
+........................................................................................
+
+          Multiple terraform.tfvars
+main. tf        vaiable.tf      stage.tfvars      production.tfvars
+
+terraform apply -varofile=" "
+
+......................................................
+command line arg
+
+  terraform apply var="instance_type=t2.micro"
+
+.......................................................
+
+  
