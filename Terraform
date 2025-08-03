@@ -89,5 +89,29 @@ command line arg
   terraform apply var="instance_type=t2.micro"
 
 .......................................................
+local variable
+
+locals{
+  var="staging"
+}
+
+${local.var}
+..........................
+output values:
+
+output "vaalue"
+
+{
+  value=aws_instance.name.public_ip
+}
+
+/.............
+loop
+count -list
+for_each -set/map
+
+............
+statefiles:
+
 
   
