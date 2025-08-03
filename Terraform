@@ -111,7 +111,45 @@ count -list
 for_each -set/map
 
 ............
-statefiles:
+statefiles: every command update the value what we are doing in tfstate file.
+  it creted by default when apply command used
 
+statefile store it in s3
+    terraform
+    {
+      backend "s3"
+      {
+        bucket="name"
+        key ="key/terraform.tfstate"         //folder
+        region=""
+      }
+    }
 
-  
+  terraform state pull -if u r abesence u dont knw wat action performed on that directry
+                        while using that cmd u will get hstry**
+
+  terraform state push -update the state file //dangerous dont use //overide
+
+.................................
+Terraform Provisioners
+    helps to move file from source to destination
+
+  provisioner "name"
+  {
+    source ="//path"
+    destination=""
+  }
+
+local provisioner -after apply it will create file 
+remote exec 
+
+provisioner "remote-exec"
+  {
+    inline =[
+    "touch hello.txt",
+    "echo helooo >> hello.txt",
+    ]
+  }
+............................................
+modules:
+
