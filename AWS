@@ -12,6 +12,7 @@ IAM
   Roles -specific/grant permission to service,contact 2 aws account,users..
 
 VPC: -secure isolated cloud in public netwrk
+
   ISOLATED VIRTUAL NETWRK
 
   app -nat gateway(to access internt) -internet
@@ -25,6 +26,10 @@ user -->internet gateway --->public subnet(accs to all private subnet) -->LB | -
 -->vpc have 2 region 2 public subnet 2 private subnet
   ip  ->internet gateway -->public subnet(NAT/ALB) -->private subnet (via route table)
 
+Nat gateway 
+  one way netwrk from ec2 to internet (instal package)
+  translate private vm ip address in private subnet  to public ddress
+  it allows internet access within private subnet 
 
 security grp vs NACL
  sec grp - serve as in instance level
