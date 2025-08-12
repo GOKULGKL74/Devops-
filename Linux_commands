@@ -92,13 +92,14 @@ Search
   grep -w "hi f" file.txt    //w word if full word present will get output
 search word in cureent directry  
   grep -win "gokul" ./*.txt  /w -word i -case sensitive n-line number
-ping- to check connectivity status
+ping- to check connection established
 
 zip -zip zipfile.zip file.txt      //zipfile.zip -zip filename file.txt -whch file going to zip
 unzip -unzip file.txt
 
 networking cmnds:
-1. nslookup google.com   //ipaddress
+1. nslookup google.com   //what is?  
+2. curl google.com     //see contents of page 
 
 set:
 1.set -x  //debug mode  -to c command in output
@@ -122,6 +123,9 @@ ssh username@ip
 location
 which git
 which docker
+
+package:
+wget package   //package --copy from google 
 
 
 
