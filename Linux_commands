@@ -14,7 +14,8 @@ Linux commands
 ->ls -R           //to check all folder inside folder in one cmd
 ->cd .            //current directry
 ->cd ..           //previous directry
-    
+->cd              //home 
+-r   /recursive     eg: if file inside folder rm wont wrk so use -r // rm -r file2
 
 man ls  //
   man -description of commnd
@@ -22,7 +23,8 @@ man ls  //
 
 
 history  //previous commds
-  
+whoami 
+
 creation:    >   -  output 
   cat > file.txt 
   cat > file2.txt
@@ -33,6 +35,7 @@ creation:    >   -  output
   cat hello.txt | tr a-z A-Z >hi.txt      //content in hello.txt chnged to capital ns stored in hi.txt  tr-translate 
 
   touch file.txt
+  nano file.txt // create nd open
   vim file.txt   //create nd open file 
 
 copy: cp file.txt file2.txt
@@ -75,6 +78,11 @@ Permission:  chmod 3 arg -user(owner) grp everyone
 Root permission://adminstrative purpose
   1.change to sudo then give root permission
   sudo chown root file.txt
+
+sudo -root user 
+whoami 
+
+
 ................
 process
   1.ps -ef   //p-process f-details of the process in full format
@@ -106,6 +114,14 @@ wget path   //download the log file nd store in loc
 search:
 sudo find / -name file     //sudo -root user else we get permsiion denied  / -all folder 
 
+vm:
+
+ssh username@ip
+  //username =ubuntu 
+
+location
+which git
+which docker
 
 
 
