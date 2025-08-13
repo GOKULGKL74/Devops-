@@ -31,6 +31,10 @@ Nat gateway
   translate private vm ip address in private subnet  to public ddress
   it allows internet access within private subnet 
 
+Route table
+  public route table -igw
+  private route table -nat (ec2 connect via internet using nat)
+
 security grp vs NACL
  sec grp - serve as in instance level
  Nacl -security at subnet lvl 
@@ -234,4 +238,7 @@ cloud migration: 7 stages    =7 R s
   retire nd retain -not in cloud migration but its decision this app need r not
 
 STEP1: change from monolithic to microservice architecture
-  
+
+
+/////////////////////////////////////////////////////////
+
