@@ -1,1 +1,14 @@
+HA -3
+Control Plane:  -managed by aws
+  ETCD db -backup
+  Scheduler -watch for new pods asign to nodes
+  Control manager - desired state = actual state 
+  Cloud manager - feature that r not in aws by add and configure -eks with load balancer
+  API server - interact with above components - auth nd athen 
+                Take yaml file and send api req with  payload to api server 
 
+managed by us 
+k8 nodes:
+  kubectl -responsible for running container[cmd line fr k8s via api server] define n pod spec
+  kube proxy 
+  contner
