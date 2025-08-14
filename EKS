@@ -12,3 +12,45 @@ k8 nodes:
   kubectl -responsible for running container[cmd line fr k8s via api server] define n pod spec
   kube proxy 
   contner
+
+EKS (control) + fargate (data/instance)  =robust highly stable k8s cluster 
+EKS + EC2 (we need to configure like autoscale..)
+
+step1 : k8s starts node (yaml)
+        service:  1.cluster IP  -only master nd slave access
+                  2.Node port -who hav access to master ip 
+                  3.LB -creates elastic ip -costly   so Ingresssss*
+
+Ingress: route the ip to service to pod  [user -vpc -public subnet -LB (ingres controller)-ingress -pod] 
+      need to dwnld ingress frm helm
+
+step2: dwnld prereq
+kubectl -interact with k8s cluster
+eksctl -interact with EKS cluster
+aws cli
+
+    eksctl create cluster --name demo* --region us-east*  --fargate***      /ec2
+  [openID -integrate  identity provider (login with)] by default IAM
+
+STEP3: create namespace /default namespace create app
+  eksctl create fargateprofile \
+    --cluster demo-cluster \
+    --region us-east-1 \
+    --name alb-sample-app \
+    --namespace game-2048*              //use default also 
+
+step4: apply (yaml file)   
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/examples/2048/2048_full.yaml
+
+need IAM OIDC provider for acess servce 
+    eksctl utils associate-iam-oidc-provider --cluster $cluster_name --approve 
+
+step5:create IAM policy for ALB
+  CURL ....
+  create role 
+  attact the role to servce acc
+  helm chat will create controller //
+          helm repo eks https:..
+          install it 
+
+[ingress raised -controller created lb]
