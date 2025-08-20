@@ -1,3 +1,7 @@
+pod -app -starting point
+node -master node,slave node 
+cluster -n of node
+
 i.k3Drawbacks of dockers:
   -single host 
   -no auto healing - devoper keep track whch container s down 
