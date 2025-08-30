@@ -1,1 +1,14 @@
-HELM
+HELM  ?
+  single user can serve docker container
+  if million user ?cant serve so K8S -K8s cluster wil autoscale ,auto deploy,LB [lot of commd ]
+  Managing k8s is big task  -so Helm chart (top of the  k8s) 
+      helm chart provides top layer abstract with  minimal command  that internaly communicate with k8s
+  comands:
+    helm install my-app ./my-app
+    helm uninstall my-app
+
+pre-reqinstal:
+  free:
+  -microk8s  alternaives eks,
+  -kubectl
+  -configure .kube 
