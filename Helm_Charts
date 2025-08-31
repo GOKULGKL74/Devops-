@@ -7,8 +7,12 @@ HELM  ?
     helm install my-app ./my-app
     helm uninstall my-app
 
-pre-reqinstal:
-  free:
-  -microk8s  alternaives eks,
+pre-req-instal:
+  -K8S cluster (eks,microk8s...) 
   -kubectl
   -configure .kube 
+  and Helm chart
+
+demo:
+-->heml create helloworld
+    //charts.yaml,values.yaml,templates   
