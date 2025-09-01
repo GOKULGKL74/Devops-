@@ -1,18 +1,27 @@
-HELM  ?
+HELM  ?  -package manager for k8s
   single user can serve docker container
   if million user ?cant serve so K8S -K8s cluster wil autoscale ,auto deploy,LB [lot of commd ]
   Managing k8s is big task  -so Helm chart (top of the  k8s) 
       helm chart provides top layer abstract with  minimal command  that internaly communicate with k8s
-  comands:
-    helm install my-app ./my-app
-    helm uninstall my-app
 
-pre-req-instal:
-  -K8S cluster (eks,microk8s...) 
-  -kubectl
-  -configure .kube 
-  and Helm chart
+main commds:
+[ helm repo add  -helm repo add bitnami https
+  helm search  -helm search repo  bitnami |grep  -i argocd
+  helm install  -helm install 
+  helm list
+  helm uninstall eks
+]
 
-demo:
--->heml create helloworld
-    //charts.yaml,values.yaml,templates   
+if package not availbe ? add repo to helm 
+  eg:aws eks
+  1.search doc eg:helm repo add eks https..
+  2.helm install alb1 eks/aws-load-balance    //under eks we have aws load balancer 
+
+  popular repo :bitnamo
+  command:helm repo add bitnami https:... [very usefule]
+          under bitnami many repo available like prometoeius ,nginx...
+          eg:helm install prometheous bitnami/prometheous   //prometheous  -user name
+
+  create chart nd upload in repo -us eit 
+
+  
