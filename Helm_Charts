@@ -1,9 +1,13 @@
+linux -apt -package manager 
+k8s -helm -pacakage manager
 HELM  ?  -package manager for k8s
   single user can serve docker container
   if million user ?cant serve so K8S -K8s cluster wil autoscale ,auto deploy,LB [lot of commd ]
   Managing k8s is big task  -so Helm chart (top of the  k8s) 
       helm chart provides top layer abstract with  minimal command  that internaly communicate with k8s
-
+  if multiple k8s cluter which cluster helm will connect ? current context  [kubectl config current-context]
+choco install helm   //windows
+main thig -->add repo nd install
 main commds:
 [ helm repo add  -helm repo add bitnami https
   helm search  -helm search repo  bitnami |grep  -i argocd
