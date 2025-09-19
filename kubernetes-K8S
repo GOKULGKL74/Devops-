@@ -117,6 +117,12 @@ Y ingress?
   user deploy ingress controller(ngnix) in k8s cluste nd depend on req define  ingress  yaml file define (white listing...) 
   ingress contoller watch for ingress resourse  nd provide the feature
 
+eg: devlop an app http://myapp:8080     -pod
+    http://192...:8080        -service -test case uselful in ip
+    https:myapp                -ingress   -no ip no port
+[browser to proxy -proxy to ingress -ingress to servce -servcw to pod]  //bare model
+IMPLEMENTATON:need ingress controller -evaluation nd progress like redirections   
+  
 .........
 
 RBAC:role based access control
