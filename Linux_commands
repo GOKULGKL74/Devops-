@@ -192,8 +192,11 @@ wc filename -get count
 
 find -> find ./ -name gokul     //  ./  ->from this folder to any folder
 
-
-
+ssh nd scp  
+ssh: -putty  -connection
+scp -winscp  -copy file frm one server to another 
+ssh username@hostname     //username -ubuntu or whoami   hostname - type he cmd   
+or ssh username@ip
 
 
   
