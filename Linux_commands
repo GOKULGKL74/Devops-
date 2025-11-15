@@ -191,12 +191,30 @@ top     //everything at one command about usage size mry
 wc filename -get count 
 
 find -> find ./ -name gokul     //  ./  ->from this folder to any folder
+        find .
+awk ->pattern search
+        awk '{print $1, $2}' file.txt  //1st nd 2nd  column
 
 ssh nd scp  
 ssh: -putty  -connection
 scp -winscp  -copy file frm one server to another 
 ssh username@hostname     //username -ubuntu or whoami   hostname - type he cmd   
 or ssh username@ip
+
+permission
+4-read -r
+2-write-w
+1-exec-x
+0-no permission
+eg:
+d w r x  r - w  r - x  1 ubuntu ubuntu 8787 may 10 202 index.txt
+d -directry 
+w r x ->write read execute   [user]
+r - w ->red write             [group]
+r - x ->read execute         [others]
+
+  chmod 577 file.txt   //user have read nd ecex other,sudo have rwx
+
 
 
   
