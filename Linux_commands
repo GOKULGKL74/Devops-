@@ -5,6 +5,10 @@ move cursor to begining-ctrl+A
 move cursor to end-ctrl+E
 remove everthing -ctrl+U
 remove everthing after cursor -ctrl+K
+home  : cd   or  ~/
+cd -  :frequently opened directry
+ls -lstr  -use for list 
+source .bashrc or source .bash_profile  -once u set env variable exceute this   
 
 what is home directory?
 /home/ubuntu    ubuntu ->username 
@@ -15,10 +19,13 @@ vi -editor  nano editor
 :q!   ->without save nd quit
 cat -see content with out opening
 
+recursive create folder -folder inside folder
+  mkdir -p abc/test/demo
+
 how to istall package?
   apt-get install package*      //sudo apt-get install vim   ->sudo -admin
 
-uname -a   ->details of os 
+
 
 Linux commands
 ->echo $PATH     //Check what are the environmental variable are there
@@ -35,6 +42,7 @@ man ls  //
   man -description of commnd
 ./ filenmae.sh   or sh filename.sh  //execute script
 
+uname -a   ->details of os 
 
 history  //previous commds
 whoami 
@@ -46,6 +54,9 @@ creation:    >   -  output
   cat file.txt file2.txt         //show contents 
   cat file.txt         //open file contents
   echo "hi" > file.txt     //old contents replaced by hi
+   or 
+echo "hi" >> file.txt    // >> append    
+echo history >> file.txt 
   cat hello.txt | tr a-z A-Z >hi.txt      //content in hello.txt chnged to capital ns stored in hi.txt  tr-translate 
 
  
@@ -57,19 +68,17 @@ move:mv file.txt ./name     next directry
       mv file.txt rename.txt   //rename
 remove: 
   rm file.txt
-  rm -rf file   //if permission err
+  rm -rf file   //if permission err  f-folder
   rm *
   rm *.txt
 
 
-df -h    //check disc* size
-nproc   /no od cpu* running
-free    //check memory*
-top     //everything at one command about usage size mry
+
 
 head  /top 10 fine   
     head -n 4 file.txt     //first 4 lines 
 tail   /bottom 10 lines
+tail -f  //some process runing -f denotes last line output
 more   /more lines
 diff //compare 2 files  
   dif name.txt name2.txt
@@ -79,6 +88,23 @@ find -find in particular directry
   find ""
 diff -differnce btween 2 files 
   diff txt.file txt2.file 
+
+hardlink:
+ln file.txt file2.txt   //file2 (updated name like alias )same data with two reference
+soft link:
+ln -s file.txt file2.tx   //just an refernce if u delete original it wont point so no data
+
+Alias:
+cd /abc/data/file
+alias car="cd /abc/data/file"  [temporary if permenantly need p[aste in .bashrc file] 
+>> car      //u r in /abc/data/file 
+
+nohup -for background running   
+nohup python3 file.txt >> output.log &    [clieck enter twice]
+  verfify?
+  top  -task manager
+  ps   -process running
+  ps -aux |grep file.txt
 
 Permission:  chmod 3 arg -user(owner) grp everyone 
 4-read
@@ -128,6 +154,7 @@ set:
 logs:
 curl path  //retrive log from url
 wget path   //download the log file nd store in loc
+  wget "link"
 
 search:
 sudo find / -name file     //sudo -root user else we get permsiion denied  / -all folder 
@@ -150,9 +177,20 @@ df -disk space
 ssh -ssh ipaddress@hostname    
 wget -download file   //wget https
 curl -fetch data //curl http:..
+zip - zip -r zipFileName.zip /foldername    
+unzip -unzip zipFileName.zip
+tar -tar -czvf tarFileName.tar /scripts    //vf -show wht we done cz -force compress
+    -tar -zxcf tarFileName.tar 
+
+df -h    //check disc* size
+nproc   /no od cpu* running
+free    //check memory*
+  free -m   ..mb
+  free -g   ..gb
+top     //everything at one command about usage size mry
+wc filename -get count 
 
 find -> find ./ -name gokul     //  ./  ->from this folder to any folder
-wc -get count 
 
 
 
