@@ -221,7 +221,10 @@ chmod -R 777 file   //directry
 
   scheduling  -alarm
 cron -mac nd linux 
-
+->crontab e
+* *   python3 file 
+  /python3 -where the python 3 located (loc)  
+  file -where the file located
 
 
   
