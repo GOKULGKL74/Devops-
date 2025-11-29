@@ -198,7 +198,7 @@ awk ->pattern search
 ssh nd scp  
 ssh: -putty  -connection
 scp -winscp  -copy file frm one server to another 
-ssh username@hostname     //username -ubuntu or whoami   hostname - type he cmd   
+ssh username@hostname     //username -ubuntu or whoami   hostname - type hostname -a  
 or ssh username@ip
 
 permission
