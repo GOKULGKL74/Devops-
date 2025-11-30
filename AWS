@@ -49,7 +49,9 @@ Nat gateway
 
 natgateway -outbound
 bastion host -inbound 
-
+highly available -avalibilty zone
+scalable -auto scale -no of req high *
+server comunicate with another serer dif vpc -vpc piering 
 Route table
   public route table -igw
   private route table -nat (ec2 connect via internet using nat)
