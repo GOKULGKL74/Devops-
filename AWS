@@ -1,48 +1,76 @@
  s3
   obj based storage 
   store static files -audio,video,.. 
-  
+   
 IAM  
   Authentication- enter ofc
   Authorisation - enter server room 
 .
  user ,policy,groups
-  User -attach policy 
-  grps -if have many people
-  Roles -specific/grant permission to service,contact 2 aws account,users..
+  Users -attach policy 
+  policy-eg:s3 full acess
+  grps -if have many people -crete grp
+  Roles -temproary -specific/grant permission to access aws service,contact 2 aws account,users..
+   eg:app needs to access aws s3 -for taht we need roles 
 
-VPC: -secure isolated cloud in public netwrk
+Elastic - flexible -scale up down 
+
+EC2:virtual server   
+  5types:
+   general
+   memory
+   compute 
+   storage 
+   accelerated
+  chmod 600 .pem 
+ ssh -i / .pem ubutu@ip      username@ip
+
+VPC: -secure isolated cloud in public netwrk [ip range]
 
   ISOLATED VIRTUAL NETWRK
 
   app -nat gateway(to access internt) -internet
 
-user -->internet gateway --->public subnet(accs to all private subnet) -->LB | -->route table -->private subnet -->security grp | -->app
+user -->internet gateway->R53 --->public subnet(accs to all private subnet) -->LB | -->route table -->private subnet -->security grp | -->app
 
- nacl -netrk access control list -security at subnet lvl
-  firewall which control inbound outbound yraffic  -from subnet to internet
+ nacl -netrk access control list -security at subnet lvl [same security applied for all subnet]- allow+deney
+  firewall which control inbound outbound traffic  -from subnet to internet
   masking the subnet ip address (either routing /lb ip)
+  order based -100 so on..
 
 -->vpc have 2 region 2 public subnet 2 private subnet
   ip  ->internet gateway -->public subnet(NAT/ALB) -->private subnet (via route table)
 
 Nat gateway 
-  one way netwrk from ec2 to internet (instal package)
+  access internet from  ec2 to internet (eg: instal package)-if hpns ip address is shown to internet 
+         so..mask the ip  either LB(snat) r router(gat nateway) 
   translate private vm ip address in private subnet  to public ddress
-  it allows internet access within private subnet 
+  it allows internet access within private subnet  
+
+natgateway -outbound
+bastion host -inbound 
 
 Route table
   public route table -igw
   private route table -nat (ec2 connect via internet using nat)
 
 security grp vs NACL
- sec grp - serve as in instance level
- Nacl -security at subnet lvl 
+ sec grp - serve as in instance level -allow only
+ Nacl -security at subnet lvl -allow+deney
 
-security grp   default : alllow all outbound allow expect port 25(mail) |  inbount:deny 
+security grp   default : alllow all outbound allow expect port 25(mail) |  inbound:deny 
        y not port 25- bz of spam 
  inbound -user to ap
  outbound  -ap to internt/othr app
+
+Route 53:     maps nd hc 
+ DNS-maps domain name with IP address
+ user send a req -it wil reach R53 -matches the table(dns rec) with domain nd ip Addrs -send to LB 
+   amazon sels DNS else buy on godaddy....and integrate it
+
+  route 53  checks in hosted zone either private/public 
+            inside Hosted zone ,there was dns records 
+  
 
 CLI: commnd line interfce
   aws UI / CLI (IAAS)/
