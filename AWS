@@ -1,4 +1,4 @@
- s3
+ s3 simple storage servce -realibility -99.999999999    (9)   -scalable,available,effecive,security,cost,perfrmnce
   obj based storage 
   store static files -audio,video,.. 
    
@@ -74,27 +74,31 @@ Route 53:     maps nd hc
             inside Hosted zone ,there was dns records 
   
 
-CLI: commnd line interfce
+CLI: commnd line interfce -giv input -it will send api to aws  [mediator btween juser nd aws]
+  [security cred->access keys] only 2 keys allowed 
+      >aws configure
   aws UI / CLI (IAAS)/
  CLI- automation eg:10vpc creation ..... need python 
       using API can create/update /delte in aws
-      tools to automation:Amazon CLI ,Teraform,cloud formation for AWS 
+      tools to automation:Amazon CLI ,Teraform,cloud formation for AWS ,cdk
 CLI -simple task like ls ,create ..    teraform.cloud formation -complicated task like create vpc...
 terraform- IAAS where ansible configure 
 
 CFT: Cloud formation template*
+  user giv input ->cft convert to API calls->aws   [stack->template->api call]
   CFT -supports YAML,JSON  ->aws api call->aws
   Principles: Declarative(template , version (git)
-  CFT Has dedect Drift option -if some one chnge code- we can track altered section 
+  CFT Has dedect Drift option -if some one chnge code- we can track altered section ****
   syntx:
     verison
     description:
     metadata - author,proj name
-    paramtre -
-    rules
-    mapping
+    paramtre -during run time 
+    rules -s3 should be s3.smal -so if any one gve s3 large in paramater -
+    mapping -asign paramtr to varible
     conditions
-    resourse -mandatry
+    resourse -mandatry**
+    o/p
   imp*** useful plugins bunch of req 
       --->YAML
       --->AWS Toolkit
