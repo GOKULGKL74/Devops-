@@ -134,7 +134,18 @@ THEORY:
                                         CI- aws code build -build ,code scan,build img,img scan,img push ....
                                         CD -aws code deploy- k8s ,ec2
 
-wht s jenkins? implemnting CI  ND Invoking CD 
+wht s jenkins? implements CI  ND invokes  CD (argocd)   [jenkins is ci tool]
+ CI -build unit test  nd scan,code scan ,image build,img scan,image push 
+ argoCD-gitops tools
+code comit:
+  codepipeline-> invoking CI->codebuild -build.....
+                invoking CD ->codedeploy ..argocd
+
+
+
+
+
+
 cloud watch
 EC2 -Virtual compute/server
 
