@@ -103,12 +103,19 @@ CFT: Cloud formation template*
       --->YAML
       --->AWS Toolkit
 
-CI/CD
+AWS CI/CD (4)-
+  1-code commit -git
+  2-code pipeline -pipeline
+  3-code build -docker
+  4.code deploy  -
+
+code commit:
   dont use root account use IAM account
   AWS own set of CI/CD 
-    [1-code(github)- webhooks trigger it reach 2.jenkins 3.build process strted (testing )-final product at docker-deploy on EC2)
+    [1-code(github)- webhooks trigger it reach 2.jenkins pipelines 3.build process strted (testing )-final product at docker-4.deploy on EC2)
         code commit(version control git)- Host -private 
               we can use editor /aws UI -in UI we can only upload /edit one file at time so use Terminal**
+
         code pipeline(jenkins pipleline)- Archestrator
         code build(maven)-docker 
         code deploy(argo cd/shell script)
@@ -117,16 +124,17 @@ private: github private/gitlab server instal in lap/aws code commit
     managed aws services
 
   disadvntge:
-   restricted
+   restricted, gitlab has copilot advnce features 
    less intragaration with service outside aws eg:git - if u click . visual studio open ,codepilot so on..
-    UI -not great
-
+    UI -not great and upload /edit at once no multiple files upload 
+how to use: create repo in aws codecommit ,install git in local nd clone it nd wrk it
 THEORY:
 
   code commit(git) -trigger aws code pipeline (1)-invokes CI nd Invokes CD
                                         CI- aws code build -build ,code scan,build img,img scan,img push ....
                                         CD -aws code deploy- k8s ,ec2
 
+wht s jenkins? implemnting CI  ND Invoking CD 
 cloud watch
 EC2 -Virtual compute/server
 
