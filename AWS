@@ -2,7 +2,7 @@
   obj based storage 
   store static files -audio,video,.. 
    
-IAM  
+IAM  -controls aws services  
   Authentication- enter ofc
   Authorisation - enter server room 
 .
@@ -150,13 +150,15 @@ cloud watch
 EC2 -Virtual compute/server
 
 aws lambda  -compute(EC2)/serverless(lmbda)
-  depend upon req-automaically create compute and scale up /down
+  event driven 
+  lam-depend upon req-automaically create compute and scale up /down
   serverless - create server nd proceed nd vanish   
     eg:paymnt option -create infrasture -process nd vanish 
   we dont knw where hosted,auto scale, no ip address 
   event driven eg:run ths job at 10am everyday -cludwatch 
                eg:if any storage resticted by cmpy gp3 -if wrkedn configured gp3 -sent an  notification
-  for trigger by default: lambda_handler(like main function) going to trigger by automatic if extra function added need to include inside lamda handler function
+  for trigger by default: lambda_handler(like main function) going to trigger by automatic
+         if extra function added need to include inside lamda handler function
 cost optiminzation-stale resources either delete /notify using cloudwatch
   event driven -drive event automatic (create cron job that will run at 1 am) not by manual
 
@@ -173,18 +175,20 @@ y lambda?
   security 
 
 cloud front
-  CDN - content delivery netwrk -create copy on edge loc(cached) -for easy access/reduce latency
+  CDN - content delivery netwrk -create copy on edge loc(cached) local copy-for easy access/reduce latency
       no need to go for central loc 
   req through routers
 
-ECR -Aws servce for store nd manage containers -aws own container archestry 
+ECR -Aws servce for store nd manage containers -aws own container archestry  -docker hub ,crio.io
+  store docker img
   Elastic Container Registry -private repo
   it has IAM so extra security 
   
 
 k8s -open source -popular -heavy architect
+  
   COE -auto healing via controler (up down),auto scale via harizontal pod scale
-  if need aditional features -k8s hav option to extend but not ECR (crd)-by build own controler nd extend k8s
+  if need aditional features -k8s hav option to extend CRD but not ECR (crd)-by build own controler nd extend k8s
   popular -community support-open source -upto date 
 
 docker drawbacks:
@@ -192,8 +196,9 @@ docker drawbacks:
   no auto scle,auto heal
 
 ECS -Elastic container  servce -simple arch  -alternative for kubernetes
-    
-    Auto healing (up down),auto scaling (if trafic it multiple)
+    fully managed container archestration
+    Auto healing (up down),auto scaling (if trafic it multiple)  ,  task definitio :define (like pod)
+
     structure: while creating cluster -2 option 
     1.fargate -no need to manage (serverless like lambda)-to run container [lamda for smal nd quik action]
     2.ec2
@@ -209,6 +214,10 @@ ECS -Elastic container  servce -simple arch  -alternative for kubernetes
 
 
 Eks -amazon k8s -managed k8s obj by aws -popular 
+ master node -by aws
+ workernode -2 option EC2 nd Fargate(aws serverless compute)
+
+mater by aws slave by fargate-  highly available /stable eks 
 [node
     control plane -wrker node ...>aws can tk care of control plane 
         ETCD (Recover)-like replicas,dep specs..
@@ -230,21 +239,23 @@ Eks -amazon k8s -managed k8s obj by aws -popular
               ec2-config autoscaling,moitoring ..need to take care by us
      if we create pod(lowest )-will get cluster IP
      Y SERVICE? how to access that app 
+
     ->note: service: node port -person who hav access to master node ip can access the app
                      clsuter port (default) -access via wrker /master node
                      load balance mode -pblic -elastic IP  -costly    so ingress better option 
             all under VPC -vpc hv public /private subnet (app in private subnet)
                    public - need LB / if private 
-
-         what is ingress  eg :nginx  -ingress.yml`
+     dashboard availbe -eg:pods ,nodes..
+         what is ingress  eg :nginx  -ingress.yml`  -route the trafic inside cluster
                /abc goes->forward the req to servce->servce to  /abc pod  -like neeed to configure via kubectl 
                 outside user can not access anything inside bz it is in private vpc    (private vpc we plce app)
                 in public subnet plce LB that LB can access ingress via ingress controler
+                    Ingress controller watches ingress servce -if servce there it wll creat ALB 
                 user talk to ALB -alb goes to ingres servce (/abc) 
 
 practise
 kubectl -interact with k8s cluster (kubectl needs kube config file  )
-eksctl -
+eksctl - wrking with eks cluster
 aws cli- aws configure ,id ..
 Can integrate any identity provider- LDAP ,okta,keycloak
 
@@ -262,16 +273,20 @@ Can integrate any identity provider- LDAP ,okta,keycloak
          by curl cmd   and create the policy (documentation)and create service acc with attach role 
   use helm for install load balancer controller 
 
-secret mnager:
+secret management aws (3):
+
  secret manager -highly secure -high cost 
-  rotation option with lammda 
- system manager- docker user name ,docker registry url (less secure)   -use combination of secret nd system manager to reduce cost
+    rotation option with lammda 
+ system manager- parameter store -easy to retrive (by IAM)role 
+     docker user name ,docker registry url (less secure)   -use combination of secret nd system manager to reduce cost
  hashi-corp vault - moving frm aws to azre....migration diffuclt -  ///multi cloud its useful(centralized soln)
   -dedicted secret manager solution -opensource 
   centralization 
   encryption feature //community driven
 
-
+eg:docker registry url ,username-system manager
+   docker paswrd -secret mangr
+ use the combination for effective way in cost 
 
 cloud migration: 7 stages    =7 R s
   preparation -one time activity
