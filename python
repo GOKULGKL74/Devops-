@@ -1,0 +1,21 @@
+pass - do nothing
+*args -numb of arguments
+**kwargs -kwyword args
+
+set -unordered  nd no duplicates
+dictionary -ordered and key with values
+
+data types:
+    numeric int floot bool 
+    sequence -list set{} tuppple() range 
+
+    list -ordered ,accessed by index
+    set -no duplicates ,unordered 
+    tupple - duplicates, ordered,immutable nd mixed datatypes ,chnged after creation
+    dictinary -key with value
+
+  mutable -cant edited -list ,dictionary
+  unmutable -edited -tupple ,string
+
+  packages -collecion of module
+  module -single file
