@@ -1,7 +1,13 @@
- s3 simple storage servce -realibility -99.999999999    (9)   -scalable,available,effecive,security,cost,perfrmnce
+Iaas - customer need to tc of data nd os
+paas -amzon tc of platform(os) and customer tc of data
+saas -serverless -customer focus on code
+
+s3 simple storage servce -realibility -99.999999999    (9)   -scalable,available,effecive,security,cost,perfrmnce
   obj based storage 
   store static files -audio,video,.. 
-   
+   Amazon rds - stuctured data (ecomerce)
+   dynamo db- -semi strctured -high salibulity 
+
 IAM  -controls aws services  
   Authentication- enter ofc
   Authorisation - enter server room 
@@ -40,7 +46,12 @@ user -->internet gateway->R53 --->public subnet(accs to all private subnet) -->L
 
 -->vpc have 2 region 2 public subnet 2 private subnet
   ip  ->internet gateway -->public subnet(NAT/ALB) -->private subnet (via route table)
-
+load balancer- distributes incoming traffic to multiple targets
+ types
+   application load balancer -7 layer sec
+   netwrk load balancer -4la yer 
+   gateway load balancer
+   clasic load balancer
 Nat gateway 
   access internet from  ec2 to internet (eg: instal package)-if hpns ip address is shown to internet 
          so..mask the ip  either LB(snat) r router(gat nateway) 
@@ -84,7 +95,7 @@ CLI: commnd line interfce -giv input -it will send api to aws  [mediator btween 
 CLI -simple task like ls ,create ..    teraform.cloud formation -complicated task like create vpc...
 terraform- IAAS where ansible configure 
 
-CFT: Cloud formation template*
+CFT: Cloud formation template*  -iac -
   user giv input ->cft convert to API calls->aws   [stack->template->api call]
   CFT -supports YAML,JSON  ->aws api call->aws
   Principles: Declarative(template , version (git)
@@ -146,7 +157,8 @@ code comit:
 
 
 
-cloud watch -monitoring 
+cloud watch -monitoring tool for -app that run on aws
+ metrics,logs,alarm
 EC2 -Virtual compute/server
 
 aws lambda  -compute(EC2)/serverless(lmbda)
@@ -312,3 +324,12 @@ STEP1: change from monolithic to microservice architecture
 
 /////////////////////////////////////////////////////////
 
+intervw
+stoping EC2 - shutdown 
+terminating EC2 - permanently delete
+
+AMI -amazon machine image 
+ pre-configured template that req to launch template 
+
+Horizontal scaling - adding more machine to distribute workload
+vertical scaling - focus on existing machine by adding extra config
