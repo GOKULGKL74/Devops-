@@ -41,7 +41,6 @@ user -->internet gateway->R53 --->public subnet(accs to all private subnet) -->L
 
  nacl -netrk access control list -security at subnet lvl [same security applied for all subnet]- allow+deney
   firewall which control inbound outbound traffic  -from subnet to internet
-  masking the subnet ip address (either routing /lb ip)
   order based -100 so on..
 
 -->vpc have 2 region 2 public subnet 2 private subnet
