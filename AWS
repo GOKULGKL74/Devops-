@@ -6,7 +6,7 @@ s3 simple storage servce -realibility -99.999999999    (9)   -scalable,available
   obj based storage 
   store static files -audio,video,.. 
    Amazon rds - stuctured data (ecomerce)
-   dynamo db- -semi strctured -high salibulity 
+   dynamo db- -semi strctured -high scalaibility 
 
 IAM  -controls aws services  
   Authentication- enter ofc
